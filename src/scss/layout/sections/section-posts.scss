@@ -1,26 +1,53 @@
-.section-posts{
-  .card{
+.section-posts {
+  padding: 60px 0;
+  .card {
     position: relative;
     border-radius: 10px;
     height: 100%;
     padding: 0 40px 40px;
-    &:last-child{
-      text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+   }
+
+  .card-pay {
+    text-align: center;
+    color: #ffffff;
+
+    .card-post__thumb {
+      padding-bottom: 16px;
+      margin-bottom: 45px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .card-post__img {
+      width: 81px;
+      height: 78px;
+    }
+    .card-post__title{
       color: #ffffff;
     }
+    .btn{
+      margin-top: 20px;
+    }
   }
-  .card-post{
+
+  .card-post {
     position: relative;
     background-color: #FFFFFF;
-    box-shadow: 0 37px 50px 2px rgba(44, 200, 204, .11);
-    &__thumb{
+    box-shadow: 0 2px 50px 2px rgba(44, 200, 204, .11);
+    color: #3B4040;
+    &__thumb {
       position: relative;
       min-height: 215px;
       display: flex;
       justify-content: center;
       align-items: flex-end;
       overflow: hidden;
-      &:before{
+
+      &:before {
         position: absolute;
         content: '';
         display: block;
@@ -33,17 +60,28 @@
         bottom: 34px;
         z-index: 0;
       }
-      img{
+
+      img {
         position: relative;
       }
     }
+    &__title{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.3;
+      text-transform: uppercase;
+      color: #22A1A6;
+      margin-bottom: 10px;
+    }
   }
-  .posts-list{
+
+  .posts-list {
     display: flex;
     margin: 0 -10px;
-    &__item{
+
+    &__item {
       width: 33.33%;
-      padding: 40px 10px;
+      padding: 0 10px;
     }
   }
 }
