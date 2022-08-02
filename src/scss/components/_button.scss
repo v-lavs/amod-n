@@ -1,0 +1,24 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition: .5s;
+
+  &_main {
+    text-align: center;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 22px 16px;
+  }
+}
+
+
+
+
+
+
+

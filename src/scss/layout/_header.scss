@@ -1,0 +1,167 @@
+.btn_burger,
+.btn_close {
+  display: none;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.btn_burger {
+  background-image: url(../assets/img/burger.svg);
+  margin-right: 54px;
+
+}
+
+.btn_close {
+  background-image: url(../assets/img/close.svg);
+}
+
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: #334040;
+  background-color: transparent;
+  z-index: 1000;
+  padding: 32px 0;
+  font-size: 16px;
+  transition: .35s;
+
+  &__logo {
+    max-width: 96px;
+    margin-left: 30px;
+  }
+
+  &__logo-site {
+    display: block;
+    width: 220px;
+    margin-right: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lang-switch {
+    margin-left: auto;
+  }
+
+  &.decor {
+    padding: 16px 0;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      background: rgba(255, 255, 255, .4);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+  }
+
+  .social-bar {
+    display: none;
+  }
+}
+
+.nav {
+  &__footer {
+    display: none;
+    //display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #3B4040;
+    padding-bottom: 80px;
+  }
+
+  &__footer-item {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 20px;
+    font-feature-settings: 'salt' on, 'liga' off;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 1px;
+      height: 25px;
+      background-color: #3B4040;
+      opacity: .2;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+
+    a:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .social-bar {
+    width: 100%;
+    padding: 50px 0 45px;
+    border-bottom: 1px solid #334040;
+    margin-bottom: 40px;
+
+    &__item {
+      margin: 0 10px;
+    }
+  }
+}
+
+
+@include respond-to($md) {
+
+  .btn_burger {
+    display: block !important;
+  }
+
+  .nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+
+
+    transition: transform .5s;
+    transform: translateX(-100%);
+    z-index: 999;
+
+    &.open {
+      transform: translateX(0);
+    }
+
+
+  }
+  .btn_close {
+    display: block !important;
+  }
+}

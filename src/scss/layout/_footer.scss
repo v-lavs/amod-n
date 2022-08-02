@@ -1,0 +1,122 @@
+.footer {
+  font-size: 16px;
+  line-height: 1.5;
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #3B4040;
+  padding-bottom: 15vh;
+
+  &__logo {
+    display: inline-flex;
+    max-width: 134px;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 13px;
+    flex-grow: 1;
+    span {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__logo-img {
+    width: 100%;
+  }
+
+  .text_small {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 7px;
+  }
+
+  .info-block {
+    font-size: 15px;
+    line-height: 1.2;
+
+    a:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 40px;
+  }
+
+  &_bottom {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 80px;
+    border-top: 1px solid rgba(51, 64, 64, .1);
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 20px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 1px;
+      height: 25px;
+      background-color: #3B4040;
+      opacity: .2;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+
+    a:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+  .social-bar{
+    padding-top: 8px;
+  }
+}
+
+.disclaimer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 15vh;
+  z-index: 500;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, .4);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .container {
+    padding: 20px 0;
+  }
+}
