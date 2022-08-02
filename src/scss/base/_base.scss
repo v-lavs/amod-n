@@ -1,5 +1,5 @@
 body {
-  font: 400 18px $main-font;
+  font: 400 16px/1.5 $main-font;
   height: 100%;
   color: #3B4040;
 
@@ -10,6 +10,7 @@ body {
   }
 }
 
+
 .hide {
   position: absolute;
   width: 1px;
@@ -19,6 +20,92 @@ body {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.text_uppercase{
+  text-transform: uppercase;
+}
+
+.bg_green-gradient{
+  background: linear-gradient(42.54deg, #2CD2D9 0%, #25B2B8 100%);
+}
+
+.attention-block{
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  font-size: 24px;
+  line-height: 1.17;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 40px 20px 20px;
+  &:before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 53px;
+    height: 51px;
+    background-color: #22A1A6;
+    border-radius: 6px;
+    background-image: url(../assets/img/attention.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 33px 31px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    z-index: 1;
+  }
+  &__text{
+    width: 100%;
+    max-width: 670px;
+    margin: 0 auto;
+  }
+}
+.shadow{
+  &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #2CC8CC;
+    opacity: 0.15;
+    filter: blur(50px);
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    height: 24px;
+  }
+}
+.note-block{
+  position: relative;
+  width: 100%;
+  background: #FFFFFF;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 47px 20px 26px;
+  text-align: center;
+  &:before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 289px;
+    height: 2px;
+    border-radius: 100px;
+    background-color: #22A1A6;
+     left: 50%;
+    transform: translateX(-50%);
+    top: -1px;
+    z-index: 1;
+  }
+  &.shadow:after{
+    height: 6px;
+    bottom: -6px;
+  }
+  &__text{
+    width: 100%;
+    max-width: 815px;
+    margin: 0 auto;
+  }
 }
 
 .social-bar {
@@ -33,7 +120,7 @@ body {
   }
 }
 
-.backdrop{
+.backdrop {
   display: none;
   position: fixed;
   top: 0;
@@ -47,7 +134,8 @@ body {
 
 .dynamic-content {
   p {
-
+    font-size: 16px;
+    margin-bottom: 1.25em;
     &:last-child {
       margin-bottom: 0;
     }
@@ -93,6 +181,21 @@ body {
         left: 0;
         top: 15px;
       }
+    }
+  }
+  ol {
+    position: relative;
+    font-size: 16px;
+    padding-left: 32px;
+    line-height: 1.5;
+    color: #3B4040;
+    counter-reset: list;
+
+    li:before {
+      position: absolute;
+      left: 8px;
+      counter-increment: list;
+      content: counters(list, '. ')'.';
     }
   }
 
