@@ -1,5 +1,5 @@
 body {
-  font: 400 16px/1.5 $main-font;
+  font: 400 18px/1.5 $main-font;
   height: 100%;
   color: #3B4040;
 
@@ -40,6 +40,32 @@ body {
 
 sup {
   font-size: .65em;
+}
+.corner{
+  position: relative;
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url(../assets/img/corner.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 48px;
+    height: 47px;
+  }
+
+  &:before {
+    transform: rotate(180deg);
+    top: -20px;
+    left: -20px;
+  }
+
+  &:after {
+    bottom: -20px;
+    right: -20px;
+  }
 }
 
 .bg_green-gradient {
