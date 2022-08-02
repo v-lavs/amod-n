@@ -976,6 +976,30 @@ sup {
   margin-bottom: 0;
 }
 
+.dynamic-content h1,
+.dynamic-content h2,
+.dynamic-content h3,
+.dynamic-content h4,
+.dynamic-content h5,
+.dynamic-content h6 {
+  margin-bottom: 1.5em;
+}
+
+.dynamic-content h1,
+.dynamic-content h2 {
+  font-size: 32px;
+}
+
+.dynamic-content h3,
+.dynamic-content h4 {
+  font-size: 28px;
+}
+
+.dynamic-content a:hover,
+.dynamic-content a:focus {
+  text-decoration: underline;
+}
+
 .dynamic-content ul {
   padding-left: 15px;
   margin-bottom: 20px;
@@ -983,20 +1007,19 @@ sup {
 
 .dynamic-content ul > li {
   position: relative;
-  padding-left: 20px;
-  margin-bottom: 8px;
+  padding-left: 25px;
 }
 
 .dynamic-content ul > li:before {
   position: absolute;
   content: '';
   display: block;
-  background-color: #000000;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  left: 0;
-  top: 15px;
+  background-color: #3B4040;
+  left: 8px;
+  top: 10px;
 }
 
 .dynamic-content ol {
@@ -1764,6 +1787,72 @@ sup {
   width: 100%;
   max-width: 910px;
   margin: 0 auto;
+}
+
+.section-about {
+  color: #ffffff;
+}
+
+.section-about__inner {
+  display: flex;
+  border-radius: 10px;
+  padding-top: 30px;
+}
+
+.section-about__thumb {
+  max-width: 585px;
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.section-about__header {
+  padding-top: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: 25px;
+}
+
+.section-about__part {
+  padding-right: 70px;
+}
+
+.section-about__content {
+  max-width: 460px;
+  padding-left: 20px;
+}
+
+.section-about__content ul {
+  padding-top: 25px;
+}
+
+.section-about__content ul li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.section-about__content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.section-about__content ul li:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 13px;
+  height: 18px;
+  background-image: url(../assets/img/ic_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  left: 0;
+  top: 6px;
+}
+
+.section-about .section__title {
+  font-weight: 400;
+  font-size: 28px;
+  color: #ffffff;
+  text-align: left;
 }
 
 @media only screen and (max-width: 1366px) {

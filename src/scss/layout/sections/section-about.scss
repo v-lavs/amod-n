@@ -1,0 +1,64 @@
+.section-about {
+  color: #ffffff;
+
+  &__inner {
+    display: flex;
+    border-radius: 10px;
+    padding-top: 30px;
+  }
+
+  &__thumb {
+    max-width: 585px;
+    width: 50%;
+    flex-shrink: 0;
+  }
+
+  &__header {
+    padding-top: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 25px;
+  }
+
+  &__part {
+    padding-right: 70px;
+  }
+
+  &__content {
+    max-width: 460px;
+    padding-left: 20px;
+
+    ul {
+      padding-top: 25px;
+
+      li {
+        position: relative;
+        padding-left: 22px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          width: 13px;
+          height: 18px;
+          background-image: url(../assets/img/ic_arrow.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          left: 0;
+          top: 6px;
+        }
+      }
+    }
+  }
+
+  .section__title {
+    font-weight: 400;
+    font-size: 28px;
+    color: #ffffff;
+    text-align: left;
+  }
+}

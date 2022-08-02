@@ -41,8 +41,10 @@ body {
 sup {
   font-size: .65em;
 }
-.corner{
+
+.corner {
   position: relative;
+
   &:before,
   &:after {
     position: absolute;
@@ -174,22 +176,22 @@ sup {
   }
 
   h1, h2, h3, h4, h5, h6 {
-
+    margin-bottom: 1.5em;
   }
 
   h1, h2 {
-
+    font-size: 32px;
   }
 
   h3, h4 {
-
+    font-size: 28px;
   }
 
   a {
 
     &:hover,
     &:focus {
-
+      text-decoration: underline;
     }
   }
 
@@ -199,19 +201,18 @@ sup {
 
     > li {
       position: relative;
-      padding-left: 20px;
-      margin-bottom: 8px;
+      padding-left: 25px;
 
       &:before {
         position: absolute;
         content: '';
         display: block;
-        background-color: #000000;
-        width: 5px;
-        height: 5px;
+        width: 6px;
+        height: 6px;
         border-radius: 50%;
-        left: 0;
-        top: 15px;
+        background-color: #3B4040;
+        left: 8px;
+        top: 10px;
       }
     }
   }
