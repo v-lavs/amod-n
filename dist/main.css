@@ -830,6 +830,20 @@ body.modal_open {
   text-transform: uppercase;
 }
 
+.section__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #22A1A6;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+sup {
+  font-size: .65em;
+}
+
 .bg_green-gradient {
   background: linear-gradient(42.54deg, #2CD2D9 0%, #25B2B8 100%);
 }
@@ -1526,6 +1540,23 @@ body.modal_open {
   margin-bottom: 10px;
 }
 
+.section-posts .card-post__content ul li {
+  position: relative;
+  padding-left: 25px;
+}
+
+.section-posts .card-post__content ul li:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3B4040;
+  left: 8px;
+  top: 10px;
+}
+
 .section-posts .posts-list {
   display: flex;
   margin: 0 -10px;
@@ -1534,6 +1565,37 @@ body.modal_open {
 .section-posts .posts-list__item {
   width: 33.33%;
   padding: 0 10px;
+}
+
+.how-work {
+  margin: 0 -10px;
+  width: 100%;
+  overflow: visible;
+}
+
+.how-work__slide {
+  width: 33.33%;
+  padding: 40px 10px 30px;
+  height: auto;
+}
+
+.how-work__card {
+  padding: 20px;
+  height: 100%;
+  max-width: 386px;
+  box-shadow: 0 2px 50px 2px rgba(44, 200, 204, 0.11);
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  color: #334040;
+}
+
+.how-work__thumb {
+  padding-top: 59%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 32px;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -1585,6 +1647,17 @@ body.modal_open {
 
   .btn_close {
     display: block !important;
+  }
+
+  .how-work {
+    overflow: hidden;
+    width: calc(100% + (100vw - 100%) / 2);
+    margin: 0;
+  }
+
+  .how-work__slide {
+    width: auto;
+    margin: 0;
   }
 }
 

@@ -22,15 +22,31 @@ body {
   border: 0;
 }
 
-.text_uppercase{
+.text_uppercase {
   text-transform: uppercase;
 }
 
-.bg_green-gradient{
+.section {
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #22A1A6;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+}
+
+sup {
+  font-size: .65em;
+}
+
+.bg_green-gradient {
   background: linear-gradient(42.54deg, #2CD2D9 0%, #25B2B8 100%);
 }
 
-.attention-block{
+.attention-block {
   width: 100%;
   position: relative;
   border-radius: 10px;
@@ -39,7 +55,8 @@ body {
   text-align: center;
   color: #FFFFFF;
   padding: 40px 20px 20px;
-  &:before{
+
+  &:before {
     position: absolute;
     content: '';
     display: block;
@@ -56,14 +73,16 @@ body {
     top: -20px;
     z-index: 1;
   }
-  &__text{
+
+  &__text {
     width: 100%;
     max-width: 670px;
     margin: 0 auto;
   }
 }
-.shadow{
-  &:after{
+
+.shadow {
+  &:after {
     position: absolute;
     content: '';
     display: block;
@@ -76,7 +95,8 @@ body {
     height: 24px;
   }
 }
-.note-block{
+
+.note-block {
   position: relative;
   width: 100%;
   background: #FFFFFF;
@@ -84,7 +104,8 @@ body {
   border-radius: 10px;
   padding: 47px 20px 26px;
   text-align: center;
-  &:before{
+
+  &:before {
     position: absolute;
     content: '';
     display: block;
@@ -92,16 +113,18 @@ body {
     height: 2px;
     border-radius: 100px;
     background-color: #22A1A6;
-     left: 50%;
+    left: 50%;
     transform: translateX(-50%);
     top: -1px;
     z-index: 1;
   }
-  &.shadow:after{
+
+  &.shadow:after {
     height: 6px;
     bottom: -6px;
   }
-  &__text{
+
+  &__text {
     width: 100%;
     max-width: 815px;
     margin: 0 auto;
@@ -136,6 +159,7 @@ body {
   p {
     font-size: 16px;
     margin-bottom: 1.25em;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -183,6 +207,7 @@ body {
       }
     }
   }
+
   ol {
     position: relative;
     font-size: 16px;
@@ -195,7 +220,7 @@ body {
       position: absolute;
       left: 8px;
       counter-increment: list;
-      content: counters(list, '. ')'.';
+      content: counters(list, '. ') '.';
     }
   }
 

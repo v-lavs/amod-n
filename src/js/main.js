@@ -69,5 +69,47 @@ $(document).ready(function () {
             }
         });
     });
+
+//    SLIDERS
+    let howWorkSlider;
+
+    const howWorkSelector = $('.how-work').get(0);
+
+//    HOW-WORK
+
+    function handleResponsive() {
+        if ($(window).outerWidth() <= 1024) {
+            if (!howWorkSlider && howWorkSelector) {
+                howWorkSlider = new Swiper(".how-work", {
+                    slidesPerView: "auto",
+                    spaceBetween: 20,
+                });
+            } else {
+                if (howWorkSlider) {
+                    destroySwiper(howWorkSlider);
+                    howWorkSlider = null;
+                }
+            }
+        }
+    }
+    handleResponsive();
+        let resizeId;
+
+
+        handleResponsive();
+
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeId);
+            resizeId = setTimeout(handleResponsive, 500);
+        });
+
+
+        //destroy slider
+
+        function destroySwiper(sliderInstance) {
+            if (sliderInstance instanceof Swiper && sliderInstance.initialized) {
+                sliderInstance.destroy(true, true);
+            }
+        }
 });
 
