@@ -81,21 +81,6 @@ sup {
   }
 }
 
-.shadow {
-  &:after {
-    position: absolute;
-    content: '';
-    display: block;
-    background-color: #2CC8CC;
-    opacity: 0.15;
-    filter: blur(50px);
-    border-radius: 10px;
-    left: 0;
-    right: 0;
-    height: 24px;
-  }
-}
-
 .note-block {
   position: relative;
   width: 100%;
@@ -104,6 +89,8 @@ sup {
   border-radius: 10px;
   padding: 47px 20px 26px;
   text-align: center;
+  z-index: 1;
+  box-shadow: 0 34px 42px -43px rgba(44, 200, 204, .20);
 
   &:before {
     position: absolute;
@@ -117,11 +104,6 @@ sup {
     transform: translateX(-50%);
     top: -1px;
     z-index: 1;
-  }
-
-  &.shadow:after {
-    height: 6px;
-    bottom: -6px;
   }
 
   &__text {

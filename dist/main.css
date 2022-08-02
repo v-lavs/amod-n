@@ -883,19 +883,6 @@ sup {
   margin: 0 auto;
 }
 
-.shadow:after {
-  position: absolute;
-  content: '';
-  display: block;
-  background-color: #2CC8CC;
-  opacity: 0.15;
-  filter: blur(50px);
-  border-radius: 10px;
-  left: 0;
-  right: 0;
-  height: 24px;
-}
-
 .note-block {
   position: relative;
   width: 100%;
@@ -904,6 +891,8 @@ sup {
   border-radius: 10px;
   padding: 47px 20px 26px;
   text-align: center;
+  z-index: 1;
+  box-shadow: 0 34px 42px -43px rgba(44, 200, 204, 0.2);
 }
 
 .note-block:before {
@@ -918,11 +907,6 @@ sup {
   transform: translateX(-50%);
   top: -1px;
   z-index: 1;
-}
-
-.note-block.shadow:after {
-  height: 6px;
-  bottom: -6px;
 }
 
 .note-block__text {
@@ -1567,6 +1551,10 @@ sup {
   padding: 0 10px;
 }
 
+.section-how-work {
+  padding-top: 60px;
+}
+
 .how-work {
   margin: 0 -10px;
   width: 100%;
@@ -1596,6 +1584,46 @@ sup {
   background-position: center;
   background-size: cover;
   margin-bottom: 32px;
+}
+
+.section-memo {
+  background-color: #F2FAFA;
+  margin-top: -65px;
+  padding-top: 128px;
+  padding-bottom: 80px;
+}
+
+.remember {
+  font-size: 32px;
+  color: #22A1A6;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.aftermath {
+  display: flex;
+  max-width: 740px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-bottom: 66px;
+  text-align: center;
+}
+
+.aftermath__card {
+  width: 33%;
+  max-width: 210px;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #334040;
+}
+
+.aftermath__thumb {
+  min-height: 110px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 1366px) {

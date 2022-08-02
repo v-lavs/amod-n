@@ -1,0 +1,39 @@
+.section-memo {
+  background-color: #F2FAFA;
+  margin-top: -65px;
+  padding-top: 128px;
+  padding-bottom: 80px;
+}
+
+.remember {
+  font-size: 32px;
+  color: #22A1A6;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.aftermath {
+  display: flex;
+  max-width: 740px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-bottom: 66px;
+  text-align: center;
+
+  &__card {
+    width: 33%;
+    max-width: 210px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #334040;
+  }
+
+  &__thumb {
+    min-height: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 20px;
+  }
+}
