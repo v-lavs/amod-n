@@ -1797,6 +1797,7 @@ sup {
   display: flex;
   border-radius: 10px;
   padding-top: 30px;
+  background: radial-gradient(circle closest-side at 25% 50%, rgba(44, 210, 217, 0.5) 40%, #25B2B8 120%);
 }
 
 .section-about__thumb {

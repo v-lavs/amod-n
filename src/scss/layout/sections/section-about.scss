@@ -5,7 +5,9 @@
     display: flex;
     border-radius: 10px;
     padding-top: 30px;
+    background: radial-gradient(circle closest-side at 25% 50%, rgba(44, 210, 217, 0.5) 40%, #25B2B8 120%);
   }
+
 
   &__thumb {
     max-width: 585px;
@@ -34,7 +36,8 @@
       li {
         position: relative;
         padding-left: 22px;
-        &:last-child{
+
+        &:last-child {
           margin-bottom: 0;
         }
 
@@ -61,4 +64,5 @@
     color: #ffffff;
     text-align: left;
   }
+
 }
