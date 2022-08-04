@@ -1,10 +1,32 @@
 
 //swiper-pagination
 
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 0;
+  z-index: 10;
+  display: none;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet{
+
+  position: relative;
+  width: 11px;
+  height: 11px;
+  background-color: transparent;
+  margin: 0 3px!important;
+  border: 2px solid #2AC8CE;
+  &.swiper-pagination-bullet-active{
+    background-color: #2AC8CE;
+  }
+}
+
+
 .swiper-pagination-fraction{
 
 }
 .swiper-pagination-current{
 
 }
+
+
 

@@ -72,8 +72,10 @@ $(document).ready(function () {
 
 //    SLIDERS
     let howWorkSlider;
+    let stepSlider;
 
     const howWorkSelector = $('.how-work').get(0);
+    const stepSelector = $('.step-slider').get(0);
 
 //    HOW-WORK
 
@@ -83,6 +85,9 @@ $(document).ready(function () {
                 howWorkSlider = new Swiper(".how-work", {
                     slidesPerView: "auto",
                     spaceBetween: 20,
+                    pagination: {
+                        el: ".swiper-pagination",
+                    },
                 });
             } else {
                 if (howWorkSlider) {
@@ -91,25 +96,42 @@ $(document).ready(function () {
                 }
             }
         }
-    }
-    handleResponsive();
-        let resizeId;
-
-
-        handleResponsive();
-
-        window.addEventListener('resize', function () {
-            clearTimeout(resizeId);
-            resizeId = setTimeout(handleResponsive, 500);
-        });
-
-
-        //destroy slider
-
-        function destroySwiper(sliderInstance) {
-            if (sliderInstance instanceof Swiper && sliderInstance.initialized) {
-                sliderInstance.destroy(true, true);
+        if ($(window).outerWidth() <= 768) {
+            if (!stepSlider && stepSelector) {
+                stepSlider = new Swiper(".step-slider", {
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    pagination: {
+                        el: ".swiper-pagination",
+                    },
+                });
+            } else {
+                if (stepSlider) {
+                    destroySwiper(stepSlider);
+                    stepSlider = null;
+                }
             }
         }
+    }
+
+    handleResponsive();
+    let resizeId;
+
+
+    handleResponsive();
+
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(handleResponsive, 500);
+    });
+
+
+    //destroy slider
+
+    function destroySwiper(sliderInstance) {
+        if (sliderInstance instanceof Swiper && sliderInstance.initialized) {
+            sliderInstance.destroy(true, true);
+        }
+    }
 });
 

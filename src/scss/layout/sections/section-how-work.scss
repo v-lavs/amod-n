@@ -29,6 +29,9 @@
     background-size: cover;
     margin-bottom: 32px;
   }
+  .section__title{
+    margin-bottom: 5px;
+  }
 }
 
 @include respond-to($md){

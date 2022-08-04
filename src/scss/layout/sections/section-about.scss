@@ -1,6 +1,6 @@
 .section-about {
   color: #ffffff;
-
+  padding-bottom: 80px;
   &__inner {
     display: flex;
     border-radius: 10px;
@@ -63,6 +63,7 @@
     font-size: 28px;
     color: #ffffff;
     text-align: left;
+    margin-bottom: 0;
   }
 
 }
