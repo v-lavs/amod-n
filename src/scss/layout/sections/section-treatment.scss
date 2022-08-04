@@ -1,10 +1,11 @@
 .section-treatment {
+  position: relative;
   background-color: #f2fafa;
   border: 1px solid #22a1a6;
   border-radius: 80px;
   padding: 60px 0;
   color: #334040;
-
+  z-index: 1;
   .attention-block {
     padding-bottom: 40px;
     margin-bottom: 28px;

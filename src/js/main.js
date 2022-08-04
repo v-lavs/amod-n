@@ -86,7 +86,7 @@ $(document).ready(function () {
                     slidesPerView: "auto",
                     spaceBetween: 20,
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: ".how-work .swiper-pagination",
                     },
                 });
             } else {
@@ -102,7 +102,7 @@ $(document).ready(function () {
                     spaceBetween: 20,
                     slidesPerView: 1,
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: ".step-slider .swiper-pagination",
                     },
                 });
             } else {
