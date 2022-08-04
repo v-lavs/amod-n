@@ -1260,29 +1260,6 @@ sup {
   background-color: #2AC8CE;
 }
 
-.card {
-  display: flex;
-  align-items: center;
-}
-
-.card__icon {
-  width: 82px;
-  height: 82px;
-  flex-shrink: 0;
-  overflow: hidden;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-
-.card__text {
-  padding-left: 20px;
-}
-
-.card-list {
-  display: flex;
-}
-
 .container {
   width: 100%;
   max-width: 1248px;
@@ -1547,12 +1524,72 @@ sup {
 }
 
 .section-banner {
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 820px;
   background-size: cover;
   border-radius: 0 0 80px 80px;
+  padding-top: 133px;
   overflow: hidden;
+}
+
+.section-banner__content {
+  position: relative;
+  z-index: 1;
+  padding-left: 150px;
+  padding-bottom: 297px;
+}
+
+.section-banner__wrap-img {
+  position: absolute;
+  max-width: 893px;
+  width: 46.5%;
+  display: flex;
+  z-index: 0;
+  padding-bottom: 25px;
+  right: 0;
+  bottom: -25px;
+  height: 100%;
+}
+
+.section-banner__img {
+  display: block;
+  margin-top: auto;
+}
+
+.opportunities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 772px;
+}
+
+.opportunities__card {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 0;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #334040;
+}
+
+.opportunities__icon {
+  width: 110px;
+  height: 110px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: inherit;
+  border-radius: 50%;
+  border: 1px solid #22A1A6;
+  overflow: hidden;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.opportunities__text {
+  padding-left: 20px;
 }
 
 .section-posts {
@@ -1881,6 +1918,7 @@ sup {
 }
 
 .section-about__part {
+  width: 50%;
   padding-right: 70px;
   padding-bottom: 50px;
 }
@@ -2183,7 +2221,6 @@ sup {
   width: 890px;
   height: 890px;
   background: radial-gradient(102.5% 76.72% at 48.8% 40.56%, #66E1E6 0%, #2CD2D9 36.98%, #25B2B8 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 62.25%, 0 62.25%);
   border-radius: 50%;
   top: 15%;
   z-index: -1;
@@ -2202,6 +2239,7 @@ sup {
 }
 
 .section-info .card-list {
+  display: flex;
   flex-wrap: wrap;
   max-width: 806px;
   width: 100%;
@@ -2209,12 +2247,24 @@ sup {
 }
 
 .section-info .card {
+  display: flex;
+  align-items: center;
   width: 50%;
   margin-bottom: 40px;
 }
 
+.section-info .card__icon {
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 .section-info .card__text {
-  padding-right: 20px;
+  padding: 0  20px;
 }
 
 @media only screen and (max-width: 1366px) {

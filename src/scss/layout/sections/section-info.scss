@@ -32,6 +32,7 @@
     right: -13px;
     bottom: 0;
     overflow: hidden;
+
     &:after {
       position: absolute;
       content: '';
@@ -39,7 +40,6 @@
       width: 890px;
       height: 890px;
       background: radial-gradient(102.5% 76.72% at 48.8% 40.56%, #66E1E6 0%, #2CD2D9 36.98%, #25B2B8 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 62.25%, 0 62.25%);
       border-radius: 50%;
       top: 15%;
       z-index: -1;
@@ -60,6 +60,7 @@
   }
 
   .card-list {
+    display: flex;
     flex-wrap: wrap;
     max-width: 806px;
     width: 100%;
@@ -67,11 +68,23 @@
   }
 
   .card {
+    display: flex;
+    align-items: center;
     width: 50%;
     margin-bottom: 40px;
 
+    &__icon {
+      width: 82px;
+      height: 82px;
+      flex-shrink: 0;
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+
     &__text {
-      padding-right: 20px;
+      padding:0  20px;
     }
   }
 }

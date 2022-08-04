@@ -1,8 +1,63 @@
-.section-banner{
+.section-banner {
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 820px;
   background-size: cover;
   border-radius: 0 0 80px 80px;
+  padding-top: 133px;
   overflow: hidden;
+  &__content{
+    position: relative;
+    z-index: 1;
+    padding-left: 150px;
+    padding-bottom: 297px;
+  }
+  &__wrap-img{
+    position: absolute;
+    max-width: 893px;
+    width: 46.5%;
+    display: flex;
+    z-index: 0;
+    padding-bottom: 25px;
+    right: 0;
+    bottom: -25px;
+    height: 100%;
+  }
+  &__img{
+    display: block;
+    margin-top: auto;
+  }
+}
+
+.opportunities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 772px;
+
+  &__card {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 0;
+    font-size: 20px;
+    line-height: 1.25;
+    color: #334040;
+  }
+  &__icon{
+    width: 110px;
+    height: 110px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    border-radius: 50%;
+    border: 1px solid #22A1A6;
+    overflow: hidden;
+    background-color: #ffffff;
+    flex-shrink: 0;
+  }
+  &__text{
+    padding-left: 20px;
+  }
 }
