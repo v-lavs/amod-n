@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  &__text {
+    padding-left: 20px;
+  }
+}
+
+.card-list {
+  display: flex;
+}
