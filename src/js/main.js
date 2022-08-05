@@ -71,58 +71,57 @@ $(document).ready(function () {
     });
 
     //ACCORDION
+    function handleAccordion (selector) {
+        const firstAcc = $(selector + ' ' + '.panel__heading').get(0);
+        $(firstAcc).addClass('open');
+        $(firstAcc).siblings('.panel-collapse').slideDown(500);
 
-    $('#accordion1 .panel__heading').on('click', function () {
-        if ($(this).hasClass('open')) {
-            $(this).removeClass('open');
-            $(this)
-                .siblings('.panel-collapse')
-                .slideUp(500);
-            $('.accordion .panel__heading .open-panel')
-                .removeClass('open-panel:before')
-                .addClass('open-panel')
-        } else {
-            $('#accordion1 .panel__heading .open-panel')
-                .removeClass('open-panel:before')
-                .addClass('open-panel');
-            $(this)
-                .find('open-panel')
-                .removeClass('open-panel')
-                .addClass('open-panel:before');
-            $('#accordion1 .panel__heading').removeClass('open');
-            $(this).addClass('open');
-            $('.panel-collapse').slideUp(500);
-            $(this)
-                .siblings('.panel-collapse')
-                .slideDown(500)
-        }
-    });
+        $(selector + ' ' + '.panel__heading').on('click', function () {
+            if ($(this).hasClass('open')) {
+                $(this).removeClass('open');
+                $(this).siblings('.panel-collapse').slideUp(500);
+                $(selector + ' ' + '.panel__heading .open-panel').removeClass('open-panel').addClass('open-panel');
+            } else {
+                $(selector + ' ' + '.panel__heading .open-panel').removeClass('open-panel').addClass('open-panel');
+                $(this).find('open-panel').removeClass('open-panel').addClass('open-panel');
+                $(selector + ' ' + '.panel__heading').removeClass('open');
+                $(this).addClass('open');
+                $(selector + ' ' + '.panel-collapse').slideUp(500);
+                $(this).siblings('.panel-collapse').slideDown(500)
+            }
+        });
+    }
 
-    $('#accordion2 .panel__heading').on('click', function () {
-        if ($(this).hasClass('open')) {
-            $(this).removeClass('open');
-            $(this)
-                .siblings('.panel-collapse')
-                .slideUp(500);
-            $('#accordion2 .panel__heading .open-panel')
-                .removeClass('open-panel:before')
-                .addClass('open-panel')
-        } else {
-            $('#accordion2 .panel__heading .open-panel')
-                .removeClass('open-panel:before')
-                .addClass('open-panel');
-            $(this)
-                .find('open-panel')
-                .removeClass('open-panel')
-                .addClass('open-panel:before');
-            $('#accordion2 .panel__heading').removeClass('open');
-            $(this).addClass('open');
-            $('.panel-collapse').slideUp(500);
-            $(this)
-                .siblings('.panel-collapse')
-                .slideDown(500)
-        }
-    });
+    handleAccordion('#accordion1');
+    handleAccordion('#accordion2');
+
+
+
+    // $('#accordion2 .panel__heading').on('click', function () {
+    //     if ($(this).hasClass('open')) {
+    //         $(this).removeClass('open');
+    //         $(this)
+    //             .siblings('.panel-collapse')
+    //             .slideUp(500);
+    //         $('#accordion2 .panel__heading .open-panel')
+    //             .removeClass('open-panel:before')
+    //             .addClass('open-panel')
+    //     } else {
+    //         $('#accordion2 .panel__heading .open-panel')
+    //             .removeClass('open-panel:before')
+    //             .addClass('open-panel');
+    //         $(this)
+    //             .find('open-panel')
+    //             .removeClass('open-panel')
+    //             .addClass('open-panel:before');
+    //         $('#accordion2 .panel__heading').removeClass('open');
+    //         $(this).addClass('open');
+    //         $('.panel-collapse').slideUp(500);
+    //         $(this)
+    //             .siblings('.panel-collapse')
+    //             .slideDown(500)
+    //     }
+    // });
 
 //    SLIDERS
     let howWorkSlider;
