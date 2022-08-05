@@ -216,5 +216,34 @@ $(document).ready(function () {
             });
         }
     })
+
+    // Popover
+
+    $('.trigger-popover').click(function (e) {
+        e.preventDefault();
+        $('.trigger-popover').not(this).toggleClass('hide');
+        $(this).toggleClass('active');
+
+        const popover = $(this).siblings('.popover');
+        popover.toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+            const btnData = $(this).get(0).getBoundingClientRect();
+            const margin = 5;
+            const popoverWidth = popover.outerWidth();
+            const windowW = $(window).width();
+
+            const isRight = windowW - btnData.x - btnData.width - margin;
+            const isLeft = btnData.x - margin;
+
+            if (isRight > popoverWidth) {
+                popover.css({left: btnData.width + margin, top: 23});
+            } else if (isLeft > popoverWidth) {
+                popover.css({left: -(popoverWidth + margin), top: 23});
+            } else {
+                popover.css({top: btnData.height + margin, left: -(btnData.x - popoverWidth - btnData.width - margin)});
+            }
+        }
+    });
 });
 

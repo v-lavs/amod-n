@@ -2935,13 +2935,14 @@ sup {
   flex-wrap: wrap;
   background: #FFFFFF;
   border-radius: 6px;
-  padding: 85px 376px 75px 85px;
+  padding: 65px 376px 65px 85px;
   margin: 0;
 }
 
 .specialists .steps-list__item {
   position: relative;
   width: auto;
+  margin-top: 20px;
 }
 
 .specialists .steps-list__item:hover .steps-list__thumb,
@@ -2953,13 +2954,16 @@ sup {
   width: 80px;
   height: 80px;
   background-size: cover;
-  box-shadow: 0 0 2px #41AED9;
+  box-shadow: 0 0 2px #41AED9, 0 0 20px -6px rgba(65, 174, 217, 0.66);
   transition: .35s;
 }
 
-.specialists .steps-list__text {
+.specialists .steps-list .wrap-btn {
   position: absolute;
-  display: none;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .specialists .steps-list__wrap-img {
@@ -2969,11 +2973,32 @@ sup {
   top: -24px;
 }
 
-.view-text {
+.popover {
+  position: absolute;
+  background-color: #F2F8FA;
+  border: 1px solid #E8EEF0;
+  font-size: 12px;
+  line-height: 1.17;
+  color: #334040;
+  border-radius: 10px;
+  text-align: left;
+  padding: 5px;
+  width: 203px;
+  opacity: 0;
+  transition: opacity .5s;
+  z-index: 600;
+  pointer-events: none;
+}
+
+.popover.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.trigger-popover {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 20px;
   height: 20px;
   background: #22A1A6;
@@ -2983,9 +3008,6 @@ sup {
   font-size: 14px;
   line-height: 1;
   font-weight: 700;
-  right: 0;
-  bottom: 0;
-  transform: translate(-50%, -50%);
 }
 
 .app-method {
