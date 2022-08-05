@@ -2588,6 +2588,10 @@ sup {
   color: #3B4040;
 }
 
+.flip-card-back .swiper {
+  height: 100%;
+}
+
 .flip-card-back .flip-card__desc {
   font-size: 16px;
   line-height: 1.25;
@@ -2600,6 +2604,8 @@ sup {
 
 .flip-card__content {
   height: 100%;
+  width: 100%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2610,6 +2616,10 @@ sup {
   margin-bottom: 10px;
 }
 
+.flip-card__title + .flip-card__desc:before {
+  display: block;
+}
+
 .flip-card__desc {
   position: relative;
   padding: 10px 0;
@@ -2618,6 +2628,7 @@ sup {
 .flip-card__desc:before {
   content: '';
   position: absolute;
+  display: none;
   top: 0;
   width: 180px;
   height: 1px;
@@ -3071,9 +3082,10 @@ sup {
     width: 100%;
     padding: 0;
     height: 485px;
+    order: 1;
   }
 
-  .specialist-intro__slider .flip-card__content {
+  .specialist-intro__slider .flip-card__desc {
     max-width: 430px;
     width: 100%;
     margin-left: auto;
