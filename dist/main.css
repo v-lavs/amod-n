@@ -886,6 +886,21 @@ sup {
   background: linear-gradient(42.54deg, #2CD2D9 0%, #25B2B8 100%);
 }
 
+.shadow:after {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  bottom: 0;
+  background: #2CC8CC;
+  opacity: 0.15;
+  filter: blur(50px);
+  border-radius: 10px;
+  z-index: -1;
+}
+
 .attention-block {
   width: 100%;
   position: relative;
@@ -1313,22 +1328,6 @@ sup {
 .accordion .panel__heading {
   position: relative;
   transition: .7s;
-  border-radius: 10px;
-}
-
-.accordion .panel__heading:after {
-  position: absolute;
-  content: '';
-  display: block;
-  left: 10px;
-  top: 10px;
-  right: 10px;
-  bottom: 0;
-  background: #2CC8CC;
-  opacity: 0.15;
-  filter: blur(50px);
-  border-radius: 10px;
-  z-index: -1;
 }
 
 .accordion .panel__heading_title {
@@ -1341,6 +1340,8 @@ sup {
   position: relative;
   padding: 27px 56px 30px 40px;
   background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
   z-index: 1;
 }
 
