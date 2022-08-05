@@ -97,6 +97,7 @@ $(document).ready(function () {
                 .slideDown(500)
         }
     });
+
     $('#accordion2 .panel__heading').on('click', function () {
         if ($(this).hasClass('open')) {
             $(this).removeClass('open');
@@ -225,5 +226,13 @@ $(document).ready(function () {
             sliderInstance.destroy(true, true);
         }
     }
+
+    // Flipping cards
+    $('.specialist-intro__slider-btn').click(function (e) {
+        e.preventDefault();
+        const parent = $(this).parents('.flip-card');
+
+        $(parent).toggleClass('flip-card_active');
+    });
 });
 

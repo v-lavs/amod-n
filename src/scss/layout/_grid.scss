@@ -9,7 +9,7 @@
     max-width: 960px;
   }
   @include respond-to($sm) {
-    max-width: 704px;
+    max-width: 708px;
   }
   @include respond-to($xs) {
     max-width: 100%;
