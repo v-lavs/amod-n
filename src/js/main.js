@@ -127,10 +127,12 @@ $(document).ready(function () {
     let howWorkSlider;
     let stepSlider;
     let opportunitiesSlider;
+    let aboutSlider;
 
     const howWorkSelector = $('.how-work').get(0);
     const stepSelector = $('.step-slider').get(0);
     const opportunitiesSelector = $('.opportunities-slider').get(0);
+    const aboutSelector = $('.about-slider').get(0);
 
 
 //    HOW-WORK
@@ -152,6 +154,7 @@ $(document).ready(function () {
                 }
             }
         }
+        //STEP SLIDER
         if ($(window).outerWidth() <= 768) {
             if (!stepSlider && stepSelector) {
                 stepSlider = new Swiper(".step-slider", {
@@ -168,6 +171,7 @@ $(document).ready(function () {
                 }
             }
         }
+        //OPPORTUNITIES SLIDER
         if ($(window).outerWidth() <= 768) {
             if (!opportunitiesSlider && opportunitiesSelector) {
                 opportunitiesSlider = new Swiper(".opportunities-slider", {
@@ -181,6 +185,24 @@ $(document).ready(function () {
                 if (opportunitiesSlider) {
                     destroySwiper(opportunitiesSlider);
                     opportunitiesSlider = null;
+                }
+            }
+        }
+
+    //    ABOUT SLIDER
+        if ($(window).outerWidth() <= 768) {
+            if (!aboutSlider && aboutSelector) {
+                aboutSlider = new Swiper(".about-slider", {
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    pagination: {
+                        el: ".about-slider .swiper-pagination",
+                    },
+                });
+            } else {
+                if (aboutSlider) {
+                    destroySwiper(aboutSlider);
+                    aboutSlider = null;
                 }
             }
         }

@@ -1309,7 +1309,7 @@ sup {
 .accordion:before {
   opacity: 0.1;
   height: 1px;
-  width: 100%;
+  width: 100vw;
   background-color: #334040;
   left: 0;
   right: 0;
@@ -2083,7 +2083,7 @@ sup {
 }
 
 .section-about__content ul {
-  padding-top: 25px;
+  margin-top: 25px;
 }
 
 .section-about__content ul li {
@@ -2432,6 +2432,7 @@ sup {
 .section-clinic {
   padding-top: 60px;
   padding-bottom: 100px;
+  overflow: hidden;
 }
 
 .section-clinic .container {
@@ -2680,6 +2681,74 @@ sup {
   left: -18px;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.specialists .section-about {
+  color: #334040;
+}
+
+.specialists .section-about .wrap-slider {
+  padding-top: 20px;
+}
+
+.specialists .section-about .wrap-slider.shadow {
+  position: relative;
+}
+
+.specialists .section-about .wrap-slider.shadow:after {
+  left: 20px;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+
+.specialists .section-about .section__title {
+  max-width: 886px;
+  width: 100%;
+  color: #22A1A6;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
+.specialists .section-about__content {
+  max-width: 325px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  height: 100%;
+}
+
+.specialists .section-about__content p {
+  margin-bottom: 20px;
+}
+
+.specialists .section-about__content ul li:before {
+  background-image: url(../assets/img/ic_arrow-green.svg);
+}
+
+.about-slider {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+.about-slider__slide {
+  width: 33.33%;
+  height: auto;
+}
+
+.about-slider__slide:first-child .section-about__content {
+  margin-left: auto;
+}
+
+.about-slider__slide .wrap-img {
+  display: flex;
+  padding-top: 30px;
+}
+
+.about-slider__slide img {
+  margin-top: auto;
+  display: block;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1366px) {

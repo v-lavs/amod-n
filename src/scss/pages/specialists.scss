@@ -11,6 +11,7 @@
 .section-clinic {
   padding-top: 60px;
   padding-bottom: 100px;
+  overflow: hidden;
 
   .container {
     display: grid;
@@ -247,7 +248,8 @@
     padding: 10px 20px;
     border-radius: 6px;
     z-index: 2;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       display: block;
@@ -259,6 +261,80 @@
       left: -18px;
       top: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+}
+
+//-------------------
+
+.specialists {
+  .section-about {
+    color: #334040;
+
+    .wrap-slider {
+      padding-top: 20px;
+
+      &.shadow {
+        position: relative;
+
+        &:after {
+          left: 20px;
+          top: 20px;
+          right: 20px;
+          bottom: 20px;
+        }
+      }
+    }
+
+    .section__title {
+      max-width: 886px;
+      width: 100%;
+      color: #22A1A6;
+      text-align: center;
+      margin: 0 auto 40px;
+    }
+
+    &__content {
+      max-width: 325px;
+      padding-top: 60px;
+      padding-bottom: 30px;
+      height: 100%;
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      ul li:before {
+        background-image: url(../assets/img/ic_arrow-green.svg);
+      }
+    }
+  }
+}
+
+.about-slider {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+
+  &__slide {
+    width: 33.33%;
+    height: auto;
+
+    &:first-child {
+      .section-about__content {
+        margin-left: auto;
+      }
+    }
+
+    .wrap-img {
+      display: flex;
+      padding-top: 30px;
+    }
+
+    img {
+      margin-top: auto;
+      display: block;
+      width: 100%;
     }
   }
 }

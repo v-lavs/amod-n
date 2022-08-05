@@ -1,6 +1,7 @@
 .section-about {
   color: #ffffff;
   padding-bottom: 80px;
+
   &__inner {
     display: flex;
     border-radius: 10px;
@@ -33,7 +34,7 @@
     padding-left: 20px;
 
     ul {
-      padding-top: 25px;
+      margin-top: 25px;
 
       li {
         position: relative;
