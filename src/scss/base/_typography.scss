@@ -1,5 +1,8 @@
 
 .text {
+  &_md{
+    font-size: 20px;
+  }
   &_big {
     font-size: 32px;
     font-weight: 700;
@@ -7,6 +10,10 @@
 }
 
 .title {
+  &_md {
+    font-size: 28px;
+    line-height: 1.29;
+  }
   &_sm {
     font-size: 20px;
     line-height: 1.1;

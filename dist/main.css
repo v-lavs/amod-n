@@ -984,7 +984,7 @@ sup {
 
 .dynamic-content p {
   font-size: 16px;
-  margin-bottom: 1.25em;
+  margin-bottom: .65em;
 }
 
 .dynamic-content p:last-child {
@@ -1053,9 +1053,18 @@ sup {
   content: counters(list, ". ") ".";
 }
 
+.text_md {
+  font-size: 20px;
+}
+
 .text_big {
   font-size: 32px;
   font-weight: 700;
+}
+
+.title_md {
+  font-size: 28px;
+  line-height: 1.29;
 }
 
 .title_sm {
@@ -2428,6 +2437,100 @@ sup {
 
 .section-clinic .section__title {
   margin-bottom: 26px;
+}
+
+.section-properties {
+  min-height: 560px;
+  color: #ffffff;
+  line-height: 1.39;
+  padding-bottom: 55px;
+}
+
+.section-properties__inner {
+  display: flex;
+}
+
+.section-properties .section__title {
+  position: relative;
+  padding-bottom: 20px;
+  color: #ffffff;
+}
+
+.section-properties .section__title:before {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #ffffff;
+  bottom: 0;
+  height: 1px;
+  width: 100vw;
+  left: 0;
+  z-index: 1;
+}
+
+.section-properties__part {
+  width: 50%;
+}
+
+.section-properties__part:first-child {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-right: 68px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.section-properties__part:first-child:before,
+.section-properties__part:first-child:after {
+  position: absolute;
+  content: '';
+  display: block;
+  z-index: 0;
+}
+
+.section-properties__part:first-child:before {
+  width: 135px;
+  height: 135px;
+  background-image: url(../assets/img/bg_sec1.svg);
+  left: 4px;
+  top: 8px;
+}
+
+.section-properties__part:first-child:after {
+  width: 360px;
+  height: 360px;
+  background-image: url(../assets/img/bg_sec2.svg);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section-properties__part:last-child {
+  padding: 33px 84px 33px 0;
+  overflow: hidden;
+}
+
+.section-properties__content {
+  padding-left: 20px;
+}
+
+.section-properties .description {
+  font-style: italic;
+  color: #F2FAFA;
+  padding: 20px 20px 29px;
+  background-color: #22A1A6;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.section-properties p {
+  margin-bottom: .65em;
+}
+
+.section-properties p:last-child {
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 1366px) {

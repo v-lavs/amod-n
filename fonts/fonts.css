@@ -21,4 +21,15 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Cera Pro';
+	src: url('CeraPro-Italic.eot');
+	src: local('Cera Pro Italic'), local('CeraPro-Italic'),
+	url('CeraPro-Italic.eot?#iefix') format('embedded-opentype'),
+	url('CeraPro-Italic.woff') format('woff'),
+	url('CeraPro-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
 
