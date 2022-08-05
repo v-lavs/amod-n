@@ -189,7 +189,7 @@ $(document).ready(function () {
             }
         }
 
-    //    ABOUT SLIDER
+        //    ABOUT SLIDER
         if ($(window).outerWidth() <= 768) {
             if (!aboutSlider && aboutSelector) {
                 aboutSlider = new Swiper(".about-slider", {

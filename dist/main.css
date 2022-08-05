@@ -841,7 +841,7 @@ body.modal_open {
 }
 
 .section__title {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 32px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -968,6 +968,24 @@ sup {
   margin: 0 auto;
 }
 
+.description-dec {
+  font-style: italic;
+  padding: 20px 20px 29px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.description-dec_dark {
+  color: #F2FAFA;
+  background-color: #22A1A6;
+}
+
+.description-dec_light {
+  color: #334040;
+  background: rgba(65, 174, 217, 0.1);
+  border: 1px solid #2CC8CC;
+}
+
 .social-bar {
   display: flex;
   justify-content: center;
@@ -1084,11 +1102,16 @@ sup {
 
 .title_sm {
   font-size: 20px;
+  font-weight: 700;
   line-height: 1.1;
 }
 
 .title_xs {
   font-size: 16px;
+}
+
+.text_bold {
+  font-weight: 700;
 }
 
 .btn {
@@ -1334,8 +1357,9 @@ sup {
   transition: .7s;
 }
 
-.accordion .panel__heading_title {
+.accordion .panel__title {
   color: #3B4040;
+  text-transform: uppercase;
 }
 
 .accordion .inner {
@@ -2110,7 +2134,6 @@ sup {
 }
 
 .section-about .section__title {
-  font-weight: 400;
   font-size: 28px;
   color: #ffffff;
   text-align: left;
@@ -2257,6 +2280,13 @@ sup {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.section-features .text_big {
+  max-width: 796px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .features {
@@ -2524,15 +2554,6 @@ sup {
   padding-left: 20px;
 }
 
-.section-properties .description {
-  font-style: italic;
-  color: #F2FAFA;
-  padding: 20px 20px 29px;
-  background-color: #22A1A6;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
 .section-properties p {
   margin-bottom: .65em;
 }
@@ -2695,13 +2716,6 @@ sup {
   position: relative;
 }
 
-.specialists .section-about .wrap-slider.shadow:after {
-  left: 20px;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
-}
-
 .specialists .section-about .section__title {
   max-width: 886px;
   width: 100%;
@@ -2723,6 +2737,11 @@ sup {
 
 .specialists .section-about__content ul li:before {
   background-image: url(../assets/img/ic_arrow-green.svg);
+}
+
+.specialists .section-treatment {
+  border: none;
+  border-radius: 80px 80px 0 0;
 }
 
 .about-slider {

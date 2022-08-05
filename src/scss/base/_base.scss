@@ -37,7 +37,7 @@ body {
 
 .section {
   &__title {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 32px;
     line-height: 1.2;
     text-transform: uppercase;
@@ -168,6 +168,22 @@ sup {
   }
 }
 
+.description-dec {
+  font-style: italic;
+  padding: 20px 20px 29px;
+  border-radius: 10px;
+  margin-top: 20px;
+  &_dark{
+    color: #F2FAFA;
+    background-color: #22A1A6;
+  }
+  &_light{
+    color: #334040;
+    background: rgba(65, 174, 217, 0.1);
+    border: 1px solid #2CC8CC;
+  }
+}
+
 .social-bar {
   display: flex;
   justify-content: center;
@@ -191,6 +207,7 @@ sup {
   opacity: .5;
   z-index: 800;
 }
+
 .literature-sources{
   background-color: #ffffff;
   padding-top: 50px;
