@@ -3244,6 +3244,10 @@ sup {
 }
 
 @media only screen and (max-width: 1160px) {
+  .note-block:before {
+    width: 230px;
+  }
+
   .menu {
     flex-direction: column;
     padding: 0 15px 60px;
@@ -3766,6 +3770,26 @@ sup {
   .section-features .part_right,
   .section-features .part_left {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .section-memo {
+    padding-bottom: 60px;
+  }
+
+  .section-memo .section__title {
+    margin-bottom: 50px;
+  }
+
+  .aftermath {
+    display: block;
+  }
+
+  .aftermath__card {
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto 30px;
   }
 }
 

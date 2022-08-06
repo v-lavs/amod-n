@@ -350,6 +350,12 @@ sup {
   }
 }
 
+@include respond-to($md){
+  .note-block:before{
+    width: 230px;
+  }
+}
+
 @include respond-to($xxs){
   .btn-puy{
     width: 74px;
