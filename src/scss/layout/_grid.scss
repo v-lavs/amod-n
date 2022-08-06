@@ -7,11 +7,16 @@
 
   @include respond-to($md) {
     max-width: 960px;
+    padding: 0 32px;
   }
   @include respond-to($sm) {
-    max-width: 708px;
+    max-width: 760px;
   }
   @include respond-to($xs) {
+    max-width: 580px;
+    padding: 0 24px;
+  }
+  @include respond-to($xxs) {
     max-width: 100%;
   }
 }

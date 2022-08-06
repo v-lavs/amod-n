@@ -31,15 +31,9 @@
   font-size: 16px;
   transition: .35s;
 
-  &__logo {
-    max-width: 96px;
-    margin-left: 30px;
-  }
-
+  &__logo,
   &__logo-site {
-    display: block;
-    width: 220px;
-    margin-right: auto;
+    z-index: 1000;
 
     img {
       width: 100%;
@@ -48,10 +42,24 @@
     }
   }
 
+  &__logo {
+    display: block;
+    max-width: 96px;
+    margin-left: 30px;
+
+  }
+
+  &__logo-site {
+    display: block;
+    width: 220px;
+    margin-right: auto;
+  }
+
   .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
 
   .lang-switch {
@@ -75,10 +83,6 @@
       backdrop-filter: blur(4px);
     }
   }
-
-  .social-bar {
-    display: none;
-  }
 }
 
 .nav {
@@ -88,7 +92,6 @@
     flex-wrap: wrap;
     justify-content: center;
     color: #3B4040;
-    padding-bottom: 80px;
   }
 
   &__footer-item {
@@ -135,11 +138,24 @@
 
 
 @include respond-to($md) {
-.header{
-  padding: 20px 0;
-}
+  .header {
+    padding: 20px 0;
+  }
   .btn_burger {
     display: block !important;
+  }
+  .lang-switch {
+    padding: 0;
+
+    &__current {
+      margin-bottom: 0;
+    }
+  }
+  .lang-switch.menu {
+    .sub-menu__toggle_active + .sub-menu {
+      position: absolute;
+      transform: translateY(35px);
+    }
   }
 
   .nav {
@@ -149,10 +165,10 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    max-height: 100%;
-    overflow-y: auto;
-    background-color: #ffffff;
+    height: 100%;
 
+    background-color: #ffffff;
+    padding: 80px 24px;
     transition: transform .5s;
     transform: translateX(-100%);
     z-index: 999;
@@ -161,9 +177,55 @@
       transform: translateX(0);
     }
 
+    &__inner {
+      padding-top: 50px;
+      overflow-y: auto;
+      max-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
 
+    &__footer {
+      padding-top: 40px;
+      display: flex;
+
+      .social-bar {
+        border-bottom: 1px solid rgba(51, 64, 64, .1);
+      }
+    }
   }
   .btn_close {
-    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(50%);
+    z-index: 1000;
   }
+}
+
+@include respond-to($xs) {
+  .header {
+    .lang-switch {
+      display: none;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .header {
+    .container {
+      justify-content: space-between;
+    }
+
+    &__logo-site {
+      margin-right: 0;
+    }
+
+    &__logo {
+      display: none;
+    }
+  }
+
 }

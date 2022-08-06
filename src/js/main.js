@@ -25,12 +25,14 @@ $(document).ready(function () {
         e.preventDefault();
         nav.addClass('open');
         jQuery('.backdrop').fadeIn();
+        $('.btn_close').show();
     });
 
-    $('.btn_close, .backdrop').click(function (e) {
+    $('.btn_close, .menu__link, .backdrop').click(function (e) {
         e.preventDefault();
         nav.removeClass('open');
         jQuery('.backdrop').fadeOut();
+        $('.btn_close').hide();
     });
 
     $('.sub-menu__toggle').click(function (e) {

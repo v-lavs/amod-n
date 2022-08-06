@@ -808,7 +808,6 @@ body {
   font: 400 18px/1.5 "Cera Pro", sans-serif;
   height: 100%;
   color: #3B4040;
-  scroll-behavior: smooth;
 }
 
 body.modal_open {
@@ -818,6 +817,7 @@ body.modal_open {
 
 .wrapper {
   max-width: 1920px;
+  overflow: hidden;
   width: 100%;
   margin: 0 auto;
 }
@@ -1014,6 +1014,27 @@ sup {
 .literature-sources {
   background-color: #ffffff;
   padding-top: 50px;
+}
+
+.btn-puy {
+  position: fixed;
+  right: 104px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  width: 92px;
+  z-index: 600;
+}
+
+.btn-puy img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-puy .img-mob {
+  display: none;
 }
 
 .dynamic-content p {
@@ -1465,12 +1486,12 @@ sup {
   border-radius: 10px;
   background: #ffffff;
   font-family: "Cera Pro", sans-serif;
-  z-index: 1500;
   text-align: center;
   max-width: 800px;
   width: 100%;
   padding: 40px;
   display: none;
+  z-index: 1500;
 }
 
 .popup p {
@@ -1559,7 +1580,20 @@ sup {
   transition: .35s;
 }
 
+.header__logo,
+.header__logo-site {
+  z-index: 1000;
+}
+
+.header__logo img,
+.header__logo-site img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .header__logo {
+  display: block;
   max-width: 96px;
   margin-left: 30px;
 }
@@ -1570,16 +1604,11 @@ sup {
   margin-right: auto;
 }
 
-.header__logo-site img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .header .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .header .lang-switch {
@@ -1604,16 +1633,11 @@ sup {
   backdrop-filter: blur(4px);
 }
 
-.header .social-bar {
-  display: none;
-}
-
 .nav__footer {
   display: none;
   flex-wrap: wrap;
   justify-content: center;
   color: #3B4040;
-  padding-bottom: 80px;
 }
 
 .nav__footer-item {
@@ -1885,6 +1909,7 @@ sup {
 
 .section-posts .card-pay .card-post__title {
   color: #ffffff;
+  font-size: 24px;
 }
 
 .section-posts .card-pay .btn {
@@ -3225,10 +3250,26 @@ sup {
     width: 16px;
     height: 16px;
     border: none;
-    background-color: #ffffff;
+    background-color: transparent;
   }
 
-  .sub-menu__toggle_active + .sub-menu {
+  .menu__item .sub-menu__item {
+    margin: 0 0 10px;
+  }
+
+  .menu__item .sub-menu_column {
+    border-radius: 10px;
+  }
+
+  .menu__item .sub-menu_column li:before {
+    flex-shrink: 0;
+  }
+
+  .menu__item .sub-menu_column:before {
+    display: none;
+  }
+
+  .sub-menu__toggle_active + .sub-menu_column {
     display: block !important;
     position: static;
     visibility: visible;
@@ -3243,6 +3284,7 @@ sup {
 
   .container {
     max-width: 960px;
+    padding: 0 32px;
   }
 
   .header {
@@ -3253,6 +3295,19 @@ sup {
     display: block !important;
   }
 
+  .lang-switch {
+    padding: 0;
+  }
+
+  .lang-switch__current {
+    margin-bottom: 0;
+  }
+
+  .lang-switch.menu .sub-menu__toggle_active + .sub-menu {
+    position: absolute;
+    transform: translateY(35px);
+  }
+
   .nav {
     position: fixed;
     left: 0;
@@ -3260,9 +3315,9 @@ sup {
     top: 0;
     bottom: 0;
     width: 100%;
-    max-height: 100%;
-    overflow-y: auto;
+    height: 100%;
     background-color: #ffffff;
+    padding: 80px 24px;
     transition: transform .5s;
     transform: translateX(-100%);
     z-index: 999;
@@ -3272,8 +3327,74 @@ sup {
     transform: translateX(0);
   }
 
+  .nav__inner {
+    padding-top: 50px;
+    overflow-y: auto;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .nav__footer {
+    padding-top: 40px;
+    display: flex;
+  }
+
+  .nav__footer .social-bar {
+    border-bottom: 1px solid rgba(51, 64, 64, 0.1);
+  }
+
   .btn_close {
-    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(50%);
+    z-index: 1000;
+  }
+
+  .section-posts .posts-list {
+    flex-wrap: wrap;
+  }
+
+  .section-posts .posts-list__item {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .section-posts .posts-list__item:last-child {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .section-posts .wrap-card {
+    display: flex;
+    align-items: center;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .section-posts .card-pay {
+    padding-top: 100px;
+    padding-bottom: 117px;
+  }
+
+  .section-posts .card-pay .card-post__thumb {
+    width: 154px;
+    min-height: 0;
+    margin-bottom: 0;
+    margin-right: 40px;
+    padding-bottom: 0;
+  }
+
+  .section-posts .card-pay .card-post__img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-posts .card-pay .card-post__body {
+    padding: 0 12px;
   }
 
   .how-work {
@@ -3290,7 +3411,7 @@ sup {
 
 @media only screen and (max-width: 992px) {
   .container {
-    max-width: 708px;
+    max-width: 760px;
   }
 
   .opportunities {
@@ -3340,9 +3461,24 @@ sup {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .dynamic-content p:last-child {
     margin-bottom: 0;
+  }
+
+  .menu {
+    padding: 0;
+  }
+
+  .menu__item .sub-menu_column {
+    min-width: 312px;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .menu__item .sub-menu__item > a {
+    font-size: 16px;
   }
 
   .popup {
@@ -3365,11 +3501,33 @@ sup {
   }
 
   .container {
-    max-width: 100%;
+    max-width: 580px;
+    padding: 0 24px;
+  }
+
+  .header .lang-switch {
+    display: none;
+  }
+
+  .section-posts .posts-list__item {
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 480px) {
+  .btn-puy {
+    width: 74px;
+    right: 0;
+  }
+
+  .btn-puy .img-desc {
+    display: none;
+  }
+
+  .btn-puy .img-mob {
+    display: block;
+  }
+
   .popup {
     padding: 60px 24px;
     height: 100vh;
@@ -3377,6 +3535,48 @@ sup {
 
   .popup .section__title {
     font-size: 22px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .header .container {
+    justify-content: space-between;
+  }
+
+  .header__logo-site {
+    margin-right: 0;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .section-posts .card-pay {
+    padding: 60px 20px;
+  }
+
+  .section-posts .card-pay .card-post__thumb {
+    width: 81px;
+    height: 78px;
+    margin: 0 auto 56px;
+  }
+
+  .section-posts .wrap-card {
+    display: block;
+  }
+
+  .section-posts .posts-list__item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-posts .card-post {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    box-shadow: none;
   }
 
   .specialist-intro__slider > .swiper-slide:nth-child(1n) {
