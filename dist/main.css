@@ -1018,7 +1018,7 @@ sup {
 
 .btn-puy {
   position: fixed;
-  right: 104px;
+  right: 92px;
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
@@ -1028,9 +1028,16 @@ sup {
   z-index: 600;
 }
 
+.btn-puy:hover img,
+.btn-puy:focus img {
+  transform: scale(0.9);
+}
+
 .btn-puy img {
   width: 100%;
+  max-width: 100%;
   height: auto;
+  transition: .35s;
 }
 
 .btn-puy .img-mob {
@@ -2186,20 +2193,24 @@ sup {
   display: flex;
   border-radius: 10px;
   padding-top: 30px;
-  background: radial-gradient(circle closest-side at 25% 50%, rgba(44, 210, 217, 0.5) 40%, #25B2B8 120%);
+  background: radial-gradient(circle closest-side at 15% 50%, rgba(44, 210, 217, 0.5) 0%, #25B2B8 120%);
 }
 
 .section-about__thumb {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   max-width: 585px;
+  padding-right: 70px;
   width: 50%;
   flex-shrink: 0;
 }
 
 .section-about__header {
   padding-top: 18px;
-  padding-bottom: 14px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #FFFFFF;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .section-about__part {
@@ -3176,9 +3187,19 @@ sup {
   width: 100%;
 }
 
+@media only screen and (max-width: 1366px) {
+  .btn-puy {
+    right: 70px;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   .dynamic-content p:last-child {
     margin-bottom: 0;
+  }
+
+  .btn-puy {
+    right: 20px;
   }
 
   .specialist-intro__slider {
@@ -3407,6 +3428,18 @@ sup {
     width: auto;
     margin: 0;
   }
+
+  .section-about__thumb {
+    max-width: 387px;
+    width: 35%;
+    padding-right: 33px;
+    padding-bottom: 40px;
+  }
+
+  .section-about__part {
+    width: 65%;
+    padding-right: 50px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -3421,6 +3454,28 @@ sup {
 
   .opportunities__card {
     width: 100%;
+  }
+
+  .section-about__thumb {
+    display: none;
+  }
+
+  .section-about__inner {
+    background: linear-gradient(42.54deg, #2CD2D9 0%, #25B2B8 100%);
+    padding: 0;
+  }
+
+  .section-about__part {
+    width: 100%;
+    padding: 40px 40px 48px;
+  }
+
+  .section-about__part {
+    padding: 48px 20px 60px;
+  }
+
+  .section-about__header {
+    margin-bottom: 20px;
   }
 
   .step-slider {

@@ -215,7 +215,7 @@ sup {
 
 .btn-puy{
   position: fixed;
-  right: 104px;
+  right: 92px;
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
@@ -223,9 +223,18 @@ sup {
   border: none;
   width: 92px;
   z-index: 600;
+
+  &:hover,
+  &:focus{
+    img{
+      transform: scale(.9);
+    }
+  }
   img{
     width: 100%;
+    max-width: 100%;
     height: auto;
+    transition: .35s;
   }
   .img-desc{
 
@@ -329,6 +338,17 @@ sup {
   }
 }
 
+@include respond-to($xl){
+  .btn-puy{
+    right: 70px;
+  }
+}
+
+@include respond-to($lg){
+  .btn-puy{
+    right: 20px;
+  }
+}
 
 @include respond-to($xxs){
   .btn-puy{
