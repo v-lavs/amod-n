@@ -106,14 +106,6 @@
 
       &__toggle {
         display: none;
-        background-image: url(../assets/img/arrowhead-down.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        width: 16px;
-        height: 16px;
-        border: none;
-        background-color: #ffffff;
       }
     }
 
@@ -206,6 +198,14 @@
 
     &__toggle {
       display: inline-block !important;
+      background-image: url(../assets/img/arrowhead-down.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 16px;
+      height: 16px;
+      border: none;
+      background-color: #ffffff;
     }
   }
   .sub-menu__toggle_active + .sub-menu {

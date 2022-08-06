@@ -808,6 +808,7 @@ body {
   font: 400 18px/1.5 "Cera Pro", sans-serif;
   height: 100%;
   color: #3B4040;
+  scroll-behavior: smooth;
 }
 
 body.modal_open {
@@ -1246,14 +1247,6 @@ sup {
 
 .menu__item .sub-menu__toggle {
   display: none;
-  background-image: url(../assets/img/arrowhead-down.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  width: 16px;
-  height: 16px;
-  border: none;
-  background-color: #ffffff;
 }
 
 .menu__item:hover > .sub-menu {
@@ -3182,6 +3175,14 @@ sup {
 
   .sub-menu__toggle {
     display: inline-block !important;
+    background-image: url(../assets/img/arrowhead-down.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color: #ffffff;
   }
 
   .sub-menu__toggle_active + .sub-menu {

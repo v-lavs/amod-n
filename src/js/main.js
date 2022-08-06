@@ -17,30 +17,6 @@ function destroySwiper(sliderInstance) {
     }
 }
 
-// SMOOTH SCROLL TO ANCHOR
-function smoothScrollToAnchor(selector) {
-    $(selector).on('click', function (event) {
-        let anchor = $.attr(this, 'href');
-        let offsetSize = $("header").innerHeight();
-
-        if (anchor.match(/^#/) && anchor !== '#') {
-            event.preventDefault()
-            $('html, body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top - offsetSize
-            }, 2000);
-            nav.removeClass('open');
-            jQuery('.backdrop').fadeOut();
-            $('body').removeClass('modal_open');
-        }
-    })
-    let myHash = location.hash;
-    location.hash = '';
-    let offsetSize = $("header").innerHeight();
-    if (myHash[1] != undefined) {
-        $('html, body').animate({scrollTop: $(myHash).offset().top - offsetSize}, 1500);
-    }
-
-}
 
 $(document).ready(function () {
     //MOBILE MENU
@@ -61,6 +37,30 @@ $(document).ready(function () {
         $(this).toggleClass('sub-menu__toggle_active')
     });
 
+// SMOOTH SCROLL TO ANCHOR
+    function smoothScrollToAnchor(selector) {
+        $(selector).on('click', function (event) {
+            let anchor = $.attr(this, 'href');
+            let offsetSize = $("header").innerHeight();
+
+            if (anchor.match(/^#/) && anchor !== '#') {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top - offsetSize
+                }, 2000);
+                nav.removeClass('open');
+                jQuery('.backdrop').fadeOut();
+                $('body').removeClass('modal_open');
+            }
+        });
+    }
+
+    let myHash = location.hash;
+    location.hash = '';
+    let offsetSize = $("header").innerHeight();
+    if (myHash[1] != undefined) {
+        $('html, body').animate({scrollTop: $(myHash).offset().top - offsetSize}, 2000);
+    }
     smoothScrollToAnchor('.menu__link');
 
     //    HEADER SCROLL
