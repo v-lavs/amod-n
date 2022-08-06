@@ -130,7 +130,7 @@ $(document).ready(function () {
             howWorkSlider = null;
         }
 
-        if ($(window).outerWidth() <= 992) {
+        if ($(window).outerWidth() <= 767) {
             if (!stepSlider && stepSelector) {
                 stepSlider = new Swiper(".step-slider", {
                     spaceBetween: 20,
