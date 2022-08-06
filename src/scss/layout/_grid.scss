@@ -6,7 +6,7 @@
   margin: 0 auto;
 
   @include respond-to($md) {
-    max-width: 960px;
+    max-width: 1020px;
     padding: 0 32px;
   }
   @include respond-to($sm) {

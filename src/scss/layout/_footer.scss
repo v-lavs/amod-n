@@ -5,6 +5,7 @@
   color: #3B4040;
   padding-bottom: 15vh;
   background-color: #ffffff;
+
   &__logo {
     display: inline-flex;
     max-width: 134px;
@@ -12,6 +13,7 @@
     align-items: flex-end;
     font-size: 13px;
     flex-grow: 1;
+
     span {
       display: inline-block;
       margin-bottom: 4px;
@@ -81,13 +83,15 @@
   .container {
     position: relative;
   }
-  .social-bar{
+
+  .social-bar {
     padding-top: 8px;
   }
 }
 
 .disclaimer {
   position: fixed;
+  display: flex;
   bottom: 0;
   left: 0;
   right: 0;
@@ -112,11 +116,66 @@
   img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 100%;
   }
 
   .container {
-    padding: 20px 0;
+    padding: 5px 0;
+    height: 100%;
   }
 }
+
+@include respond-to($sm) {
+  .footer {
+    .info-block {
+      font-size: 11px;
+      max-width: 220px;
+    }
+
+    &__logo {
+      max-width: 129px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .footer {
+    &_top {
+      flex-wrap: wrap;
+    }
+
+    &_bottom {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 5px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &:before {
+        display: none;
+      }
+    }
+
+    .info-block {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      margin: 0 auto 36px;
+    }
+    .social-bar__item{
+      margin: 0 20px 0 0;
+
+    }
+  }
+}
+
+
