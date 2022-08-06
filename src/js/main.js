@@ -118,11 +118,17 @@ $(document).ready(function () {
         if ($(window).outerWidth() <= 1024) {
             if (!howWorkSlider && howWorkSelector) {
                 howWorkSlider = new Swiper(".how-work", {
-                    slidesPerView: "auto",
+                    slidesPerView: 1,
                     spaceBetween: 20,
                     pagination: {
                         el: ".how-work .swiper-pagination",
                     },
+                    breakpoints:{
+                        767:{
+                            slidesPerView: "auto",
+                            spaceBetween: 20,
+                        }
+                    }
                 });
             }
         } else {

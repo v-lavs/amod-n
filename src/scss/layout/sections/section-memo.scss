@@ -37,3 +37,10 @@
     margin-bottom: 20px;
   }
 }
+
+@include respond-to($xs){
+  .section-memo{
+    margin-top: -100px;
+    padding-top: 160px;
+  }
+}

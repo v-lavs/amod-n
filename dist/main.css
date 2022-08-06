@@ -1998,6 +1998,10 @@ sup {
   padding-top: 60px;
 }
 
+.section-how-work .shadow {
+  position: relative;
+}
+
 .how-work {
   margin: 0 -10px;
   width: 100%;
@@ -2030,6 +2034,10 @@ sup {
 
 .how-work .section__title {
   margin-bottom: 5px;
+}
+
+.how-work .swiper-pagination {
+  display: none;
 }
 
 .section-memo {
@@ -3694,6 +3702,33 @@ sup {
 
   .section-posts .posts-list__item {
     width: 100%;
+  }
+
+  .how-work {
+    width: 100%;
+    padding-bottom: 60px;
+  }
+
+  .how-work__slide {
+    width: 100%;
+  }
+
+  .how-work__card {
+    max-width: 100%;
+  }
+
+  .how-work .swiper-pagination {
+    display: block;
+    bottom: 30px;
+  }
+
+  .note-block {
+    padding-top: 24px;
+  }
+
+  .section-memo {
+    margin-top: -100px;
+    padding-top: 160px;
   }
 
   .section-treatment {
