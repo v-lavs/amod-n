@@ -1137,6 +1137,22 @@ sup {
   padding: 15px 15px 16px;
 }
 
+.btn_main:hover,
+.btn_main:focus {
+  background-color: #ffffff;
+  color: #22A1A6;
+}
+
+.btn_dark {
+  background-color: #2AC8CE;
+  border-color: #2AC8CE;
+}
+
+.btn_light {
+  border-color: #2AC8CE;
+  color: #2AC8CE;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -1457,24 +1473,51 @@ sup {
   display: none;
 }
 
+.popup p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.popup p:last-child {
+  margin-bottom: 0;
+}
+
 .popup__header {
   position: relative;
   padding-bottom: 20px;
 }
 
 .popup .section__title {
+  font-size: 22px;
   margin-bottom: 0;
 }
 
 .popup__body {
-  padding-bottom: 40px;
+  padding: 0 7px 40px;
 }
 
 .popup .btn_close {
+  width: 40px;
+  height: 40px;
+  opacity: .5;
   display: block;
   position: absolute;
-  right: -50px;
-  top: 0;
+  right: -30px;
+  top: -30px;
+}
+
+.popup .btn {
+  font-size: 20px;
+  padding: 13px 15px;
+}
+
+.popup .small-text {
+  display: block;
+  max-width: 290px;
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
 }
 
 .container {
@@ -3188,6 +3231,9 @@ sup {
   .sub-menu__toggle_active + .sub-menu {
     display: block !important;
     position: static;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
   }
 
   .dropdown > .menu__link {
@@ -3197,6 +3243,10 @@ sup {
 
   .container {
     max-width: 960px;
+  }
+
+  .header {
+    padding: 20px 0;
   }
 
   .btn_burger {
@@ -3295,12 +3345,40 @@ sup {
     margin-bottom: 0;
   }
 
+  .popup {
+    max-width: 704px;
+    height: 717px;
+  }
+
+  .popup__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popup .btn {
+    margin-bottom: 10px;
+  }
+
+  .popup .btn:last-child {
+    margin-bottom: 0;
+  }
+
   .container {
     max-width: 100%;
   }
 }
 
 @media only screen and (max-width: 480px) {
+  .popup {
+    padding: 60px 24px;
+    height: 100vh;
+  }
+
+  .popup .section__title {
+    font-size: 22px;
+  }
+
   .specialist-intro__slider > .swiper-slide:nth-child(1n) {
     height: 310px;
   }

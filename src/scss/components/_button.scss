@@ -4,7 +4,6 @@
   background-color: transparent;
   border: none;
   transition: .5s;
-
   &_main {
     text-align: center;
     font-family: $main-font;
@@ -17,6 +16,19 @@
     border-radius: 10px;
     min-width: 245px;
     padding: 15px 15px 16px;
+    &:hover,
+    &:focus{
+      background-color: #ffffff;
+      color: #22A1A6;
+    }
+  }
+  &_dark{
+    background-color: #2AC8CE;
+    border-color: #2AC8CE;
+  }
+  &_light{
+    border-color: #2AC8CE;
+    color: #2AC8CE;
   }
 }
 

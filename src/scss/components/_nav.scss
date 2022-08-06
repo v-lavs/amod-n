@@ -180,6 +180,7 @@
 
       &:hover > .sub-menu {
         display: none;
+
       }
 
       .sub-menu_column {
@@ -211,6 +212,9 @@
   .sub-menu__toggle_active + .sub-menu {
     display: block !important;
     position: static;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
   }
   .dropdown > .menu__link {
     display: inline-block;

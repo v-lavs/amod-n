@@ -15,29 +15,85 @@
   padding: 40px;
   display: none;
 
+  p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__header {
     position: relative;
     padding-bottom: 20px;
   }
 
   .section__title {
+    font-size: 22px;
     margin-bottom: 0;
   }
 
   &__body {
-    padding-bottom: 40px;
-  }
-
-  &__footer {
+    padding: 0 7px 40px;
 
   }
+
 
   .btn_close {
+    width: 40px;
+    height: 40px;
+    opacity: .5;
     display: block;
     position: absolute;
-    right: -50px;
-    top: 0;
+    right: -30px;
+    top: -30px;
+  }
 
+  .btn {
+    font-size: 20px;
+    padding: 13px 15px;
+  }
+
+  .small-text {
+    display: block;
+    max-width: 290px;
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+
+@include respond-to($xs) {
+  .popup {
+    max-width: 704px;
+    height: 717px;
+
+    &__footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .popup {
+    padding: 60px 24px;
+    height: 100vh;
+
+    .section__title {
+      font-size: 22px;
+    }
   }
 }
 
