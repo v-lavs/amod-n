@@ -358,7 +358,7 @@
   color: #334040;
   border-radius: 10px;
   text-align: left;
-  padding: 5px;
+  padding: 5px 2px 5px 8px;
   width: 203px;
   opacity: 0;
   transition: opacity .5s;
@@ -384,6 +384,27 @@
   font-size: 14px;
   line-height: 1;
   font-weight: 700;
+  &.active{
+    position: relative;
+    font-size: 0;
+    &:before {
+      position: absolute;
+      content: '\2573';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      width: 13px;
+      height: 13px;
+      color: #ffffff;
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 700;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
 }
 
 .app-method {

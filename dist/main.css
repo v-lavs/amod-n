@@ -1246,6 +1246,14 @@ sup {
 
 .menu__item .sub-menu__toggle {
   display: none;
+  background-image: url(../assets/img/arrowhead-down.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: #ffffff;
 }
 
 .menu__item:hover > .sub-menu {
@@ -1436,6 +1444,44 @@ sup {
 
 .accordion .open .open-panel__icon {
   fill: #2CC8CC;
+}
+
+.popup {
+  position: fixed;
+  height: 577px;
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background: #ffffff;
+  font-family: "Cera Pro", sans-serif;
+  z-index: 1500;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 40px;
+  display: none;
+}
+
+.popup__header {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.popup .section__title {
+  margin-bottom: 0;
+}
+
+.popup__body {
+  padding-bottom: 40px;
+}
+
+.popup .btn_close {
+  display: block;
+  position: absolute;
+  right: -50px;
+  top: 0;
 }
 
 .container {
@@ -2982,7 +3028,7 @@ sup {
   color: #334040;
   border-radius: 10px;
   text-align: left;
-  padding: 5px;
+  padding: 5px 2px 5px 8px;
   width: 203px;
   opacity: 0;
   transition: opacity .5s;
@@ -3008,6 +3054,29 @@ sup {
   font-size: 14px;
   line-height: 1;
   font-weight: 700;
+}
+
+.trigger-popover.active {
+  position: relative;
+  font-size: 0;
+}
+
+.trigger-popover.active:before {
+  position: absolute;
+  content: '\2573';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 13px;
+  height: 13px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .app-method {
@@ -3093,8 +3162,36 @@ sup {
     margin-bottom: 15px;
   }
 
+  .menu__item:hover > .sub-menu {
+    display: none;
+  }
+
+  .menu__item .sub-menu_column {
+    column-count: 1;
+  }
+
   .menu__link:before {
     display: none !important;
+  }
+
+  .sub-menu {
+    position: relative;
+    top: 0;
+    display: none;
+  }
+
+  .sub-menu__toggle {
+    display: inline-block !important;
+  }
+
+  .sub-menu__toggle_active + .sub-menu {
+    display: block !important;
+    position: static;
+  }
+
+  .dropdown > .menu__link {
+    display: inline-block;
+    padding-right: 15px;
   }
 
   .container {
@@ -3114,6 +3211,7 @@ sup {
     width: 100%;
     max-height: 100%;
     overflow-y: auto;
+    background-color: #ffffff;
     transition: transform .5s;
     transform: translateX(-100%);
     z-index: 999;

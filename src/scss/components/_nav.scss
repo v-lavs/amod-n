@@ -32,7 +32,8 @@
 
       > li:hover {
         color: #2CC8CC;
-        &:before{
+
+        &:before {
           background-color: #2CC8CC;
         }
       }
@@ -92,6 +93,7 @@
         margin: 0 0 16px;
         display: flex;
         align-items: center;
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -104,6 +106,14 @@
 
       &__toggle {
         display: none;
+        background-image: url(../assets/img/arrowhead-down.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 16px;
+        height: 16px;
+        border: none;
+        background-color: #ffffff;
       }
     }
 
@@ -175,11 +185,36 @@
     &__item {
       font-size: 20px;
       margin-bottom: 15px;
+
+      &:hover > .sub-menu {
+        display: none;
+      }
+
+      .sub-menu_column {
+        column-count: 1;
+      }
     }
 
     &__link:before {
       display: none !important;
     }
+  }
+  .sub-menu {
+    position: relative;
+    top: 0;
+    display: none;
+
+    &__toggle {
+      display: inline-block !important;
+    }
+  }
+  .sub-menu__toggle_active + .sub-menu {
+    display: block !important;
+    position: static;
+  }
+  .dropdown > .menu__link {
+    display: inline-block;
+    padding-right: 15px;
   }
 }
 

@@ -245,5 +245,19 @@ $(document).ready(function () {
             }
         }
     });
+
+    // POPUP
+    $('.popup-trigger').click(function (e) {
+        e.preventDefault();
+        $('#popupBox').fadeIn();
+        $('.backdrop').fadeIn();
+        $('body').addClass('modal-open');
+    })
+
+    $('#closePopup,  .backdrop').click(function () {
+        $('#popupBox').fadeOut();
+        $('.backdrop').fadeOut();
+        $('body').removeClass('modal-open');
+    });
 });
 
