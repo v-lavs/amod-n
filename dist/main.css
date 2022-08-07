@@ -2954,20 +2954,37 @@ sup {
   padding-bottom: 53px;
 }
 
-.block-action__wrap {
+.block-action__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
 
-.block-action__part {
-  padding-left: 80px;
+.block-action__item-grid1 {
+  grid-area: 1 / 1 / 2 / 2;
 }
 
-.block-action__part_right .block-action__heading:before {
+.block-action__item-grid2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.block-action__item-grid2 .block-action__heading:before {
   background-image: url(../assets/img/action2.svg);
+}
+
+.block-action__item-grid3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.block-action__item-grid4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.block-action__part {
+  padding-left: 80px;
 }
 
 .block-action__heading {
@@ -3132,27 +3149,28 @@ sup {
   padding-bottom: 60px;
 }
 
-.specialists .section-treatment .shadow {
-  position: relative;
-}
-
 .specialists .steps-list {
   width: 100%;
   flex-wrap: wrap;
   background: #FFFFFF;
   border-radius: 6px;
   padding: 65px 376px 65px 85px;
-  margin: 0;
+  margin: 0 auto;
+}
+
+.specialists .steps-list__wrap {
+  position: relative;
+  width: 75%;
 }
 
 .specialists .steps-list__item {
   position: relative;
   width: auto;
-  margin-top: 20px;
 }
 
 .specialists .steps-list__item:hover .steps-list__thumb,
 .specialists .steps-list__item:focus .steps-list__thumb {
+  transform: scale(1.1);
   box-shadow: 0 0 0 2px #22a1a6, 0 0 20px -6px rgba(65, 174, 217, 0.66);
 }
 
@@ -3162,6 +3180,7 @@ sup {
   background-size: cover;
   box-shadow: 0 0 2px #41AED9, 0 0 20px -6px rgba(65, 174, 217, 0.66);
   transition: .35s;
+  margin: 15px 0;
 }
 
 .specialists .steps-list .wrap-btn {
@@ -3180,7 +3199,7 @@ sup {
 }
 
 .app-method {
-  width: 40%;
+  width: 35%;
   padding-right: 20px;
   padding-top: 30px;
 }
@@ -3592,6 +3611,35 @@ sup {
     width: 55%;
     padding-right: 20px;
   }
+
+  .action-list {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .block-action__part {
+    padding-left: 30px;
+  }
+
+  .app-method {
+    width: 45%;
+  }
+
+  .specialists .steps-list__wrap-img {
+    display: none;
+  }
+
+  .specialists .section-treatment {
+    border-radius: 40px 40px 0 0;
+  }
+
+  .specialists .steps-list {
+    padding: 60px 88px;
+  }
+
+  .specialists .steps-list__wrap {
+    width: 55%;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -3785,6 +3833,60 @@ sup {
     left: 4px;
     top: -265px;
   }
+
+  .action-list {
+    padding-right: 20px;
+  }
+
+  .action-list__item-bg {
+    padding-right: 5px;
+  }
+
+  .specialists .section-treatment .d-flex {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .specialists .steps-list {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .specialists .steps-list__item {
+    margin-bottom: 0;
+  }
+
+  .specialists .steps-list__wrap {
+    width: 100%;
+  }
+
+  .app-method {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .app-method__text,
+  .app-method .description-dec {
+    width: 50%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 0;
+  }
+
+  .app-method__text {
+    padding: 0 20px;
+  }
+
+  .app-method__text p {
+    margin-bottom: 5px;
+  }
+
+  .app-method__text p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -3943,6 +4045,28 @@ sup {
   .section-info .card-list {
     width: 100%;
   }
+
+  .block-action__grid {
+    display: block;
+  }
+
+  .specialists .steps-list {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .specialists .steps-list__item {
+    margin: 0 32px;
+  }
+
+  .specialists .section-treatment {
+    border-radius: 40px 40px 0 0;
+  }
+
+  .specialists .section-treatment .d-flex {
+    padding-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -3962,6 +4086,28 @@ sup {
     max-width: 260px;
     width: 100%;
     margin: 0 auto 30px;
+  }
+
+  .app-method {
+    display: block;
+  }
+
+  .app-method__text,
+  .app-method .description-dec {
+    width: 100%;
+  }
+
+  .app-method__text {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .app-method__text p {
+    margin-bottom: 20px;
+  }
+
+  .app-method__text p:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -4083,5 +4229,35 @@ sup {
     left: 20px;
     right: 20px;
     width: auto;
+  }
+
+  .block-action {
+    padding-top: 40px;
+  }
+
+  .block-action__text {
+    margin-bottom: 10px;
+  }
+
+  .action-list {
+    margin-bottom: 17px;
+  }
+
+  .action-list:last-child {
+    margin-bottom: 0;
+  }
+
+  .specialists .steps-list {
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .specialists .steps-list__item {
+    margin: 0;
+  }
+
+  .specialists .section-treatment {
+    border-radius: 20px 20px 0 0;
   }
 }
