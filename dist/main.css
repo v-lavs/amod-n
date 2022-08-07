@@ -2494,7 +2494,7 @@ sup {
   min-height: 640px;
 }
 
-.section-info .section-info__content {
+.section-info__content {
   padding-bottom: 116px;
 }
 
@@ -2576,7 +2576,7 @@ sup {
 }
 
 .section-info .card__text {
-  padding: 0  20px;
+  padding: 0 20px;
 }
 
 .section-intro {
@@ -3516,6 +3516,13 @@ sup {
   .features__item:before {
     width: 146px;
   }
+
+  .section-info__img-wrap:after {
+    width: 700px;
+    height: 700px;
+    top: 35%;
+    left: 60px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -3612,6 +3619,41 @@ sup {
 
   .features__item:before {
     display: none;
+  }
+
+  .section-info__content {
+    padding-bottom: 0;
+  }
+
+  .section-info__img-wrap {
+    width: 55%;
+    margin-bottom: 213px;
+    overflow: hidden;
+  }
+
+  .section-info__img-wrap:after {
+    width: 770px;
+    height: 770px;
+    top: 42%;
+    left: 0;
+  }
+
+  .section-info__img-wrap img {
+    max-width: 120%;
+    margin-left: 0;
+  }
+
+  .section-info .card-list {
+    display: block;
+    width: 50%;
+  }
+
+  .section-info .card {
+    width: 100%;
+  }
+
+  .section-info .note {
+    text-align: center;
   }
 
   .specialist-intro__slider-wrap {
@@ -3786,6 +3828,14 @@ sup {
   .section-features .part_left {
     width: 100%;
   }
+
+  .section-info__img-wrap {
+    display: none;
+  }
+
+  .section-info .card-list {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -3820,6 +3870,10 @@ sup {
 
   .btn-puy .img-mob {
     display: block;
+  }
+
+  .literature-sources {
+    padding-top: 30px;
   }
 
   .popup {
@@ -3899,6 +3953,14 @@ sup {
 
   .features__icon {
     margin: 0 auto 10px;
+  }
+
+  .section-info .card {
+    margin-bottom: 20px;
+  }
+
+  .section-info .card__text {
+    padding-right: 0;
   }
 
   .specialist-intro__slider > .swiper-slide:nth-child(1n) {
