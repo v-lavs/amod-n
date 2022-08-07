@@ -1887,6 +1887,10 @@ sup {
   overflow: hidden;
 }
 
+.section-banner .container {
+  position: relative;
+}
+
 .section-banner__content {
   position: relative;
   z-index: 1;
@@ -1896,19 +1900,21 @@ sup {
 
 .section-banner__wrap-img {
   position: absolute;
-  max-width: 893px;
-  width: 46.5%;
   display: flex;
-  z-index: 0;
-  padding-bottom: 25px;
-  right: 0;
-  bottom: -25px;
+  width: 808px;
   height: 100%;
+  padding-bottom: 25px;
+  left: 100%;
+  transform: translateX(-68%);
+  bottom: -25px;
+  z-index: 0;
 }
 
 .section-banner__img {
   display: block;
   margin-top: auto;
+  width: 100%;
+  height: auto;
 }
 
 .opportunities {
@@ -3439,6 +3445,10 @@ sup {
     right: 20px;
   }
 
+  .opportunities {
+    justify-content: flex-start;
+  }
+
   .specialist-intro__slider {
     display: flex;
     flex-wrap: wrap;
@@ -3624,6 +3634,37 @@ sup {
     top: 0;
     transform: translateX(50%);
     z-index: 1000;
+  }
+
+  .section-banner {
+    background-image: url("../assets/img/bg_banner_mob.jpg") !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .section-banner .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-banner__wrap-img {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    width: 705px;
+    order: 1;
+  }
+
+  .section-banner .section-banner__content {
+    padding-bottom: 40px;
+    padding-left: 0;
+    order: 2;
+  }
+
+  .section-banner .opportunities {
+    margin: 0 auto;
   }
 
   .section-posts .posts-list {
@@ -3949,15 +3990,6 @@ sup {
     height: 14vh;
   }
 
-  .opportunities {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-
-  .opportunities__card {
-    width: 100%;
-  }
-
   .section-about__thumb {
     display: none;
   }
@@ -4266,6 +4298,16 @@ sup {
 
   .footer .social-bar__item {
     margin: 0 20px 0 0;
+  }
+
+  .opportunities {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    max-width: 420px;
+  }
+
+  .opportunities__card {
+    width: 100%;
   }
 
   .section-posts .posts-list__item {

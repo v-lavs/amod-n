@@ -8,6 +8,10 @@
   padding-top: 133px;
   overflow: hidden;
 
+  .container {
+    position: relative;
+  }
+
   &__content {
     position: relative;
     z-index: 1;
@@ -17,19 +21,21 @@
 
   &__wrap-img {
     position: absolute;
-    max-width: 893px;
-    width: 46.5%;
     display: flex;
-    z-index: 0;
-    padding-bottom: 25px;
-    right: 0;
-    bottom: -25px;
+    width: 808px;
     height: 100%;
+    padding-bottom: 25px;
+    left: 100%;
+    transform: translateX(-68%);
+    bottom: -25px;
+    z-index: 0;
   }
 
   &__img {
     display: block;
     margin-top: auto;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -67,10 +73,50 @@
   }
 }
 
-@include respond-to($sm) {
+@include respond-to($lg) {
+  .opportunities {
+    justify-content: flex-start;
+  }
+}
+
+@include respond-to($md) {
+  .section-banner {
+    background-image: url("../assets/img/bg_banner_mob.jpg") !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__wrap-img {
+      position: relative;
+      left: auto;
+      transform: none;
+      margin: 0 auto;
+      width: 705px;
+      order: 1;
+    }
+
+    .section-banner__content {
+      padding-bottom: 40px;
+      padding-left: 0;
+      order: 2;
+    }
+    .opportunities {
+      margin: 0 auto;
+    }
+  }
+}
+
+@include respond-to($xs) {
   .opportunities {
     flex-wrap: nowrap;
     justify-content: flex-start;
+    max-width: 420px;
+
     &__card {
       width: 100%;
     }
