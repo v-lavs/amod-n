@@ -121,7 +121,8 @@
   }
 
   .container {
-    padding: 5px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
     height: 100%;
   }
 }
@@ -140,6 +141,9 @@
         font-size: 12px;
       }
     }
+  }
+  .disclaimer{
+    height: 14vh;
   }
 }
 

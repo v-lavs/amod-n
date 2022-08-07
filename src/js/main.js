@@ -29,7 +29,6 @@ $(document).ready(function () {
     });
 
     $('.btn_close, .menu__link, .backdrop').click(function (e) {
-        e.preventDefault();
         nav.removeClass('open');
         jQuery('.backdrop').fadeOut();
         $('.btn_close').hide();
