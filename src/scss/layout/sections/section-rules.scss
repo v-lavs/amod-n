@@ -137,12 +137,7 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 30px;
-    &.corner{
-      &:before,
-      &:after{
-        display: none;
-      }
-    }
+
     &__card {
       width: 100%;
     }

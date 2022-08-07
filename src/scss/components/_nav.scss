@@ -207,6 +207,10 @@
       height: 16px;
       border: none;
       background-color: transparent;
+      transition: .35s;
+      &_active{
+        transform: rotate(180deg);
+      }
     }
   }
   .menu__item .sub-menu__item {

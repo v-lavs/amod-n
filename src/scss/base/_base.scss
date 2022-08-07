@@ -354,6 +354,12 @@ sup {
   .note-block:before{
     width: 230px;
   }
+  .corner{
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
 }
 
 @include respond-to($xxs){
