@@ -3443,6 +3443,21 @@ sup {
     margin: 0;
   }
 
+  .rules {
+    max-width: 956px;
+    margin: 0 auto;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .rules__card {
+    width: 50%;
+    max-width: 292px;
+    padding: 0 22px;
+    margin-bottom: 40px;
+  }
+
   .section-about__thumb {
     max-width: 387px;
     width: 35%;
@@ -3856,6 +3871,21 @@ sup {
     padding-right: 20px;
     padding-bottom: 60px;
     box-shadow: none;
+  }
+
+  .rules {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+
+  .rules.corner:before,
+  .rules.corner:after {
+    display: none;
+  }
+
+  .rules__card {
+    width: 100%;
   }
 
   .section-features__img img {

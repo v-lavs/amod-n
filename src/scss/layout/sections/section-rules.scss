@@ -103,12 +103,48 @@
     background-size: contain;
     margin-bottom: 23px;
   }
-.remember-wrap{
-  width: 100%;
-}
+
+  .remember-wrap {
+    width: 100%;
+  }
+
   .remember {
     width: 100%;
     max-width: 910px;
     margin: 0 auto;
+  }
+}
+
+@include respond-to($md) {
+  .rules {
+    max-width: 956px;
+    margin: 0 auto;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &__card {
+      width: 50%;
+      max-width: 292px;
+      padding: 0 22px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .rules {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    &.corner{
+      &:before,
+      &:after{
+        display: none;
+      }
+    }
+    &__card {
+      width: 100%;
+    }
   }
 }
