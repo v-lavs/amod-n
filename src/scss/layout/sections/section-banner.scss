@@ -105,6 +105,7 @@
       padding-left: 0;
       order: 2;
     }
+
     .opportunities {
       margin: 0 auto;
     }
@@ -112,6 +113,17 @@
 }
 
 @include respond-to($xs) {
+  .section-banner {
+    min-height: 0;
+    padding-bottom: 20px;
+
+    .section-banner__wrap-img {
+      width: 400px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
   .opportunities {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -122,3 +134,4 @@
     }
   }
 }
+

@@ -4300,6 +4300,17 @@ sup {
     margin: 0 20px 0 0;
   }
 
+  .section-banner {
+    min-height: 0;
+    padding-bottom: 20px;
+  }
+
+  .section-banner .section-banner__wrap-img {
+    width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .opportunities {
     flex-wrap: nowrap;
     justify-content: flex-start;

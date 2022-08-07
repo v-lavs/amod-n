@@ -276,10 +276,6 @@ $(document).ready(function () {
             openAlertPopup();
         }
 
-        $('#closePopup, .backdrop').click(function () {
-            closeAlertPopup();
-        });
-
         $('#acceptAction').click(function () {
             // save flag to session storage
             sessionStorage.setItem('isMedSpecialist', '1');
