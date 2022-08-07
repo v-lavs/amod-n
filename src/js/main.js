@@ -122,8 +122,8 @@ $(document).ready(function () {
                     pagination: {
                         el: ".how-work .swiper-pagination",
                     },
-                    breakpoints:{
-                        767:{
+                    breakpoints: {
+                        767: {
                             slidesPerView: "auto",
                             spaceBetween: 20,
                         }
@@ -254,17 +254,37 @@ $(document).ready(function () {
     });
 
     // POPUP
-    $('.popup-trigger').click(function (e) {
-        e.preventDefault();
-        $('#popupBox').fadeIn();
-        $('.backdrop').fadeIn();
-        $('body').addClass('modal-open');
-    })
+    const $alertPopup = $('.alert-popup');
 
-    $('#closePopup,  .backdrop').click(function () {
-        $('#popupBox').fadeOut();
-        $('.backdrop').fadeOut();
-        $('body').removeClass('modal-open');
-    });
+    if ($alertPopup.get(0)) {
+        function openAlertPopup() {
+            $('body').addClass('modal-open');
+            $alertPopup.fadeIn();
+            $('.backdrop').fadeIn();
+        }
+
+        function closeAlertPopup() {
+            $alertPopup.fadeOut();
+            $('.backdrop').fadeOut();
+            $('body').removeClass('modal-open');
+        }
+
+
+        const isMedSpecialist = sessionStorage.getItem('isMedSpecialist');
+
+        if (!isMedSpecialist) {
+            openAlertPopup();
+        }
+
+        $('#closePopup, .backdrop').click(function () {
+            closeAlertPopup();
+        });
+
+        $('#acceptAction').click(function () {
+            // save flag to session storage
+            sessionStorage.setItem('isMedSpecialist', '1');
+            closeAlertPopup();
+        });
+    }
 });
 
