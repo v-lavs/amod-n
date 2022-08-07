@@ -3576,6 +3576,7 @@ sup {
     padding-bottom: 0;
     background-image: none !important;
     background-color: transparent;
+    min-height: 0;
   }
 
   .section-clinic {
