@@ -2825,6 +2825,195 @@ sup {
   transform: translateX(-50%);
 }
 
+.section-advantages {
+  padding-bottom: 60px;
+}
+
+.section-advantages .section__title {
+  margin-bottom: 40px;
+}
+
+.section-advantages__circle {
+  position: relative;
+  display: block;
+  width: 436px;
+  height: 436px;
+  margin: 0 auto 200px;
+  padding: 42px 43px;
+}
+
+.section-advantages__circle:before,
+.section-advantages__circle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.section-advantages__circle:before {
+  border-color: #F2FAFA;
+  clip-path: ellipse(100% 100% at 50% -36%);
+  z-index: 2;
+}
+
+.section-advantages__circle:after {
+  border-color: #2AC8CE;
+  clip-path: ellipse(100% 100% at 50% 136%);
+}
+
+.section-advantages__circle img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section-advantages__text {
+  position: absolute;
+  top: 0;
+  width: 375px;
+  height: 219px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 0;
+  z-index: 5;
+}
+
+.section-advantages__text .text_heading {
+  font-weight: 700;
+  display: block;
+}
+
+.section-advantages__text:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #2CC8CC;
+  z-index: 3;
+}
+
+.section-advantages__text_1 {
+  left: 0;
+}
+
+.section-advantages__text_1 .pin {
+  bottom: -25px;
+  right: -14px;
+  transform: rotate(90deg);
+}
+
+.section-advantages__text_2 {
+  left: 0;
+}
+
+.section-advantages__text_4,
+.section-advantages__text_3 {
+  right: 0;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.section-advantages__text_2,
+.section-advantages__text_4 {
+  transform: translateY(100%);
+}
+
+.section-advantages__text_2 .pin {
+  right: -73px;
+  bottom: 34px;
+  transform: rotate(45deg);
+}
+
+.section-advantages__text_2 .pin:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 14.5px;
+  width: 1px;
+  height: 57px;
+  background-color: #2CC8CC;
+  transform: translate(-50%, 100%);
+}
+
+.section-advantages__text_3 .pin {
+  left: -7px;
+  bottom: -25px;
+  transform: rotate(-90deg);
+}
+
+.section-advantages__text_4 .pin {
+  transform: rotate(-45deg);
+  left: -73px;
+  bottom: 34px;
+}
+
+.section-advantages__text_4 .pin:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 14.5px;
+  width: 1px;
+  height: 57px;
+  background-color: #2CC8CC;
+  transform: translate(-50%, 100%);
+}
+
+.section-advantages__text_5 {
+  top: auto;
+  bottom: -84px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.section-advantages__text_5:before {
+  width: 270px;
+  bottom: auto;
+  top: 0;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+.section-advantages__text_5 .pin {
+  top: -93px;
+}
+
+.section-advantages__text_5 .pin:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 14.5px;
+  width: 1px;
+  height: 41px;
+  background-color: #2CC8CC;
+  transform: translate(-50%, 100%);
+}
+
+.section-advantages .pin {
+  position: absolute;
+  width: 30px;
+  height: 52px;
+  background: url("../assets/img/advantages/marker.svg") center no-repeat;
+  background-size: contain;
+  z-index: 4;
+}
+
+.section-advantages .section__content {
+  position: relative;
+}
+
 .section-clinic {
   padding-top: 60px;
   padding-bottom: 50px;
@@ -3552,6 +3741,100 @@ sup {
     left: 60px;
   }
 
+  .section-advantages .container {
+    min-height: 436px;
+  }
+
+  .section-advantages__circle {
+    position: absolute;
+    right: 50%;
+    top: 55px;
+    margin-right: 100px;
+  }
+
+  .section-advantages__circle:before,
+  .section-advantages__circle:after {
+    transform: rotate(-90deg);
+  }
+
+  .section-advantages__text {
+    position: relative;
+    width: 50%;
+    height: 94px;
+    margin-left: auto;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transform: none;
+    left: 0;
+    bottom: auto;
+    top: auto;
+    padding-left: 6%;
+  }
+
+  .section-advantages__text br {
+    display: none;
+  }
+
+  .section-advantages__text:before {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    transform: none;
+  }
+
+  .section-advantages__text .pin {
+    transform: rotate(-90deg);
+    left: 0;
+    bottom: -24px;
+  }
+
+  .section-advantages__text .pin:after {
+    display: none;
+  }
+
+  .section-advantages__text_1:before {
+    left: -198px;
+  }
+
+  .section-advantages__text_1 .pin {
+    left: -198px;
+  }
+
+  .section-advantages__text_2:before {
+    left: -120px;
+  }
+
+  .section-advantages__text_2 .pin {
+    left: -120px;
+  }
+
+  .section-advantages__text_3:before {
+    left: -100px;
+  }
+
+  .section-advantages__text_3 .pin {
+    left: -100px;
+  }
+
+  .section-advantages__text_4:before {
+    left: -125px;
+  }
+
+  .section-advantages__text_4 .pin {
+    left: -125px;
+  }
+
+  .section-advantages__text_5:before {
+    left: -214px;
+  }
+
+  .section-advantages__text_5 .pin {
+    top: auto;
+    left: -214px;
+  }
+
   .section-intro {
     padding-bottom: 0;
     background-image: none !important;
@@ -3746,6 +4029,15 @@ sup {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .section-advantages__circle {
+    right: 70%;
+  }
+
+  .section-advantages__text {
+    width: 70%;
+    line-height: 1.4;
   }
 
   .section-properties__inner {
@@ -3943,6 +4235,24 @@ sup {
   .section-info .card-list {
     width: 100%;
   }
+
+  .section-advantages__circle {
+    display: none;
+  }
+
+  .section-advantages__text {
+    width: 100%;
+    height: auto;
+    padding-left: 55px;
+  }
+
+  .section-advantages__text:before {
+    left: 0;
+  }
+
+  .section-advantages .pin {
+    left: -5px;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -4083,5 +4393,16 @@ sup {
     left: 20px;
     right: 20px;
     width: auto;
+  }
+}
+
+@media all and (max-width: 1280px) and (min-width: 1160px) {
+  .section-advantages .container {
+    max-width: 1080px;
+  }
+
+  .section-advantages__text {
+    max-width: 280px;
+    font-size: 16px;
   }
 }
