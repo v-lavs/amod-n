@@ -2,7 +2,7 @@
 
 .section-clinic {
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   overflow: hidden;
 
   &__wrap {
@@ -44,6 +44,7 @@
     display: flex;
     color: #ffffff;
     margin-bottom: 55px;
+    margin-top: 50px;
   }
 
   .section__title {
@@ -407,14 +408,15 @@
 //----------------------
 
 @include respond-to($md) {
-  .section-intro{
+  .section-intro {
     padding-bottom: 0;
-    background-image: none!important;
+    background-image: none !important;
     background-color: transparent;
   }
   .section-clinic {
     padding-bottom: 77px;
     padding-top: 80px;
+
     &__wrap {
       display: block;
       width: 100%;
@@ -432,6 +434,82 @@
 
       &:last-of-type {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  .section-properties {
+    &__part:first-child {
+      width: 45%;
+      padding-right: 0;
+    }
+
+    &__part:last-child {
+      width: 55%;
+      padding-right: 20px;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-properties {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      padding-right: 20px;
+    }
+
+    .description-dec {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 20px;
+    }
+
+    .section-properties__part {
+      width: 100%;
+      padding-right: 0;
+
+      &:last-child {
+        max-width: 470px;
+        margin: 0 auto;
+      }
+
+      &:first-child {
+        order: 1;
+
+        &:after {
+          right: 138px;
+          top: 28%;
+        }
+
+        &:before {
+          left: 4px;
+          top: -265px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-properties {
+    &__part:first-child {
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+
+    .title_md {
+      padding: 0 20px 10px;
+      text-align: left;
+
+      &:before {
+        left: 20px;
+        right: 20px;
+        width: auto;
       }
     }
   }
