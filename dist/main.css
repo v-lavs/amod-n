@@ -3641,6 +3641,7 @@ sup {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 0 0 40px 40px;
   }
 
   .section-banner .container {
@@ -4308,12 +4309,21 @@ sup {
   .section-banner {
     min-height: 0;
     padding-bottom: 20px;
+    border-radius: 0 0 20px 20px;
   }
 
   .section-banner .section-banner__wrap-img {
-    width: 400px;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .section-banner .section-banner__content {
+    padding-bottom: 0;
+  }
+
+  .opportunities-slider {
+    padding-bottom: 40px;
   }
 
   .opportunities {
@@ -4545,6 +4555,14 @@ sup {
 
   .header__logo {
     display: none;
+  }
+
+  .section-banner {
+    padding-top: 103px;
+  }
+
+  .section-banner .section-banner__wrap-img {
+    width: 400px;
   }
 
   .section-posts .card-pay {
