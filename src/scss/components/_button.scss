@@ -29,6 +29,12 @@
   &_light{
     border-color: #2AC8CE;
     color: #2AC8CE;
+    &:hover,
+    &:focus{
+      border-color: #ffffff;
+      color: #ffffff;
+      background-color: #2AC8CE;
+    }
   }
 }
 

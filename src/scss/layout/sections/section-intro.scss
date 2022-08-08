@@ -165,7 +165,7 @@
 
 .flip-card__title {
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 
   & + .flip-card__desc:before {
     display: block;
@@ -186,6 +186,45 @@
     background-color: #fff;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0.2;
+  }
+}
+
+.btn-chart {
+  display: flex;
+  padding: 5px 15px 5px 20px;
+  min-width: auto;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 400;
+  border-radius: 6px;
+  color: #000000;
+
+  &:hover,
+  &:focus{
+    span {
+      transform: rotate(-90deg);
+    >  svg path{
+        fill: #ffffff!important;
+     stroke:#ffffff!important;
+      }
+    }
+  }
+  .icon-btn {
+    display: block;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    transition: .35s;
+    svg {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+
+      path {
+        fill: red;
+      }
+    }
   }
 }
 

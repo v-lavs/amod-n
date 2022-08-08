@@ -808,6 +808,7 @@ body {
   font: 400 18px/1.5 "Cera Pro", sans-serif;
   height: 100%;
   color: #3B4040;
+  background-color: #ffffff;
 }
 
 body.modal_open {
@@ -1179,6 +1180,13 @@ sup {
 .btn_light {
   border-color: #2AC8CE;
   color: #2AC8CE;
+}
+
+.btn_light:hover,
+.btn_light:focus {
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: #2AC8CE;
 }
 
 .menu {
@@ -2843,7 +2851,7 @@ sup {
 
 .flip-card__title {
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .flip-card__title + .flip-card__desc:before {
@@ -2865,6 +2873,47 @@ sup {
   background-color: #fff;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0.2;
+}
+
+.btn-chart {
+  display: flex;
+  padding: 5px 15px 5px 20px;
+  min-width: auto;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 400;
+  border-radius: 6px;
+  color: #000000;
+}
+
+.btn-chart:hover span,
+.btn-chart:focus span {
+  transform: rotate(-90deg);
+}
+
+.btn-chart:hover span > svg path,
+.btn-chart:focus span > svg path {
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.btn-chart .icon-btn {
+  display: block;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  transition: .35s;
+}
+
+.btn-chart .icon-btn svg {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.btn-chart .icon-btn svg path {
+  fill: red;
 }
 
 .section-advantages {

@@ -25,6 +25,11 @@
         <path d="M5.00006 10.0001C4.9996 9.7664 5.08098 9.53996 5.23006 9.36005C5.31401 9.25879 5.41711 9.17509 5.53346 9.11374C5.6498 9.05239 5.77711 9.01459 5.90809 9.00251C6.03906 8.99044 6.17114 9.00432 6.29674 9.04336C6.42234 9.08241 6.53901 9.14585 6.64006 9.23005L12.0001 13.7101L17.3701 9.39005C17.4723 9.30699 17.59 9.24495 17.7164 9.20752C17.8427 9.17009 17.9752 9.158 18.1062 9.17194C18.2373 9.18587 18.3643 9.22557 18.4799 9.28875C18.5955 9.35192 18.6975 9.43732 18.7801 9.54005C18.8711 9.64352 18.9398 9.76468 18.9818 9.89595C19.0237 10.0272 19.0381 10.1657 19.0241 10.3028C19.01 10.4399 18.9677 10.5726 18.8999 10.6926C18.8321 10.8126 18.7402 10.9173 18.6301 11.0001L12.6301 15.8301C12.4511 15.9771 12.2267 16.0575 11.9951 16.0575C11.7634 16.0575 11.539 15.9771 11.3601 15.8301L5.36006 10.8301C5.23904 10.7297 5.14338 10.6023 5.08083 10.4581C5.01828 10.3139 4.99061 10.157 5.00006 10.0001Z"
         />
     </symbol>
+    <symbol id="diagonal-arrow" viewBox="0 0 20 20">
+        <title>diagonal-arrow</title>
+        <path d="M13.2267 12.2643L13.4828 12.5208V12.1583V7.49999C13.4828 7.31876 13.5548 7.14495 13.683 7.0168C13.8111 6.88865 13.9849 6.81666 14.1662 6.81666C14.3474 6.81666 14.5212 6.88865 14.6494 7.0168C14.7775 7.14495 14.8495 7.31876 14.8495 7.49999V14.1667C14.8495 14.3479 14.7775 14.5217 14.6494 14.6498C14.5212 14.778 14.3474 14.85 14.1662 14.85H7.4995C7.31827 14.85 7.14446 14.778 7.01631 14.6498C6.88816 14.5217 6.81617 14.3479 6.81617 14.1667C6.81617 13.9854 6.88816 13.8116 7.01631 13.6835C7.14446 13.5553 7.31827 13.4833 7.4995 13.4833H12.1578H12.5203L12.2638 13.2272L5.34724 6.31893C5.21845 6.19014 5.14609 6.01546 5.14609 5.83333C5.14609 5.65119 5.21845 5.47651 5.34724 5.34772C5.47603 5.21894 5.6507 5.14658 5.83284 5.14658C6.01497 5.14658 6.18965 5.21894 6.31844 5.34772L13.2267 12.2643Z"
+              fill="#334040" stroke="#F2F8FA" stroke-width="0.3"/>
+    </symbol>
 </svg>
 <!--   END SVG SPRITE  -->
 <div class="wrapper">
@@ -262,10 +267,25 @@
                                     </div>
                                     <button class="specialist-intro__slider-btn"></button>
                                 </div>
+
                                 <div class="flip-card-back">
                                     <div class="flip-card__content">
-                                        <h3 class="flip-card__title">збудники <br> оніхомікозу</h3>
-                                        <img style="width: 100%" src="./assets/img/specialist/intro/chart.png" alt="">
+                                        <h3 class="flip-card__title">збудники <br> оніхомікозу<sup>1</sup></h3>
+                                        <div class="flip-card__grid">
+                                            <img style="width: 100%" src="./assets/img/specialist/intro/chart.png"
+                                                 alt="">
+                                            <div class="flip-card-back__btn-block">
+                                                <button class="btn-chart btn btn_main btn_light">Дерматофіти <span class="icon-btn"><svg width="20" height="20">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg></span></button>
+                                                <button class="btn-chart btn btn_main btn_light">Дріжджові <span class="icon-btn"><svg width="20" height="20">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg></span></button>
+                                                <button class="btn-chart btn btn_main btn_light">Плісняві <span class="icon-btn"><svg width="20" height="20">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg></span></button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <button class="specialist-intro__slider-btn blue"></button>
                                 </div>
