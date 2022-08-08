@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    position: relative;
 
     &:last-child {
       .rules-list__text {
@@ -71,11 +72,44 @@
   }
 
   &__text {
+    background-color: #ffffff;
     padding: 20px 20px 20px 0;
     border-bottom: 1px solid rgba(59, 64, 64, .1);
     flex-grow: 1;
     min-height: 81px;
     height: 100%;
+
+    .btn_close {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: #ffffff;
+      transform: none;
+      opacity: .7;
+      top: 0;
+      right: 0;
+      left: auto;
+      z-index: 1;
+    }
+  }
+
+  .btn-view {
+    display: none;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border: none;
+    border-radius: 50%;
+    background-color: #2AC8CE;
+    background-image: url(../assets/img/eye-sharp.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px 9px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
   }
 }
 
@@ -132,7 +166,55 @@
   }
 }
 
+@media screen and (max-width: 560px) {
+  .rules-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+      width: 30%;
+      margin-bottom: 35px;
+    }
+
+    &__text {
+      display: none;
+
+      &.show {
+        display: block;
+        position: fixed;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        padding: 40px;
+        width: 80%;
+        .btn_close {
+          display: block!important;
+        }
+      }
+    }
+
+    &__icon {
+      margin: 0 auto;
+    }
+
+    .btn-view {
+      display: block;
+    }
+  }
+}
+
 @include respond-to($xxs) {
+  .rules-list {
+    &__item{
+      width: 26%;
+    }
+    &__icon {
+      flex-shrink: 1;
+    }
+  }
   .rules {
     padding-left: 20px;
     padding-right: 20px;

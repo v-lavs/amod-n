@@ -288,5 +288,23 @@ $(document).ready(function () {
             closeAlertPopup();
         });
     }
+
+//    SMALL POPUP
+    $('.btn-view').on('click', function (e) {
+        e.preventDefault();
+
+        const modalID = $(this).data('modal');
+        const modal = $('#' + modalID);
+        modal.addClass('show');
+        jQuery('.backdrop').fadeIn();
+        $("body").addClass("modal-open");
+    });
+
+    $('.btn_close, .backdrop').on('click', function (e) {
+        e.preventDefault();
+        $('.rules-list__text').removeClass('show');
+        jQuery('.backdrop').fadeOut();
+        $("body").removeClass("modal-open");
+    });
 });
 
