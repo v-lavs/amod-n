@@ -618,6 +618,10 @@
       }
     }
   }
+  .section-properties__part:first-child:before,
+  .section-properties__part:first-child:after{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 560px) {

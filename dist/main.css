@@ -4096,6 +4096,7 @@ sup {
 
   .specialist-intro__slider-wrap {
     overflow: hidden;
+    padding-bottom: 60px;
   }
 
   .specialist-intro__slider {
@@ -4439,6 +4440,11 @@ sup {
 
   .specialists .section-treatment .d-flex {
     padding-bottom: 40px;
+  }
+
+  .section-properties__part:first-child:before,
+  .section-properties__part:first-child:after {
+    display: none;
   }
 }
 

@@ -134,6 +134,21 @@ $(document).ready(function () {
             destroySwiper(howWorkSlider);
             howWorkSlider = null;
         }
+        if ($(window).outerWidth() <= 992) {
+            if (!introSpecSlider && introSpecSliderSelector) {
+                introSpecSlider = new Swiper(".specialist-intro__slider-wrap", {
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    clickable: true,
+                    pagination: {
+                        el: ".specialist-intro__slider-wrap .swiper-pagination",
+                    },
+                });
+            }
+        } else {
+            destroySwiper(introSpecSlider);
+            introSpecSlider = null;
+        }
 
         if ($(window).outerWidth() <= 767) {
             if (!stepSlider && stepSelector) {
@@ -143,13 +158,6 @@ $(document).ready(function () {
                     pagination: {
                         el: ".step-slider .swiper-pagination",
                     },
-                });
-            }
-
-            if (!introSpecSlider && introSpecSliderSelector) {
-                introSpecSlider = new Swiper(".specialist-intro__slider-wrap", {
-                    spaceBetween: 20,
-                    slidesPerView: 1,
                 });
             }
 
@@ -175,9 +183,6 @@ $(document).ready(function () {
         } else {
             destroySwiper(stepSlider);
             stepSlider = null;
-
-            destroySwiper(introSpecSlider);
-            introSpecSlider = null;
 
             destroySwiper(opportunitiesSlider);
             opportunitiesSlider = null;
@@ -218,7 +223,8 @@ $(document).ready(function () {
                 slideClass: 'flip-card__content',
                 pagination: {
                     el: '.flip-card__slider .swiper-pagination',
-                    clickable: true
+                    clickable: true,
+                    type: "fraction",
                 },
             });
         }

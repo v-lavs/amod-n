@@ -165,6 +165,7 @@
 .flip-card__title {
   text-transform: uppercase;
   margin-bottom: 10px;
+
   & + .flip-card__desc:before {
     display: block;
   }
@@ -222,6 +223,7 @@
 @include respond-to($sm) {
   .specialist-intro__slider-wrap {
     overflow: hidden;
+    padding-bottom: 60px;
   }
 
   .specialist-intro__slider {
