@@ -101,25 +101,36 @@
 @include respond-to($sm) {
   .section-info {
     &__content {
+      position: relative;
       padding-bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     &__img-wrap {
-      width: 55%;
-      margin-bottom: 213px;
-      overflow: hidden;
+      position: relative;
+      width: 50%;
+      overflow: visible;
+      margin-top: auto;
 
       &:after {
         width: 770px;
         height: 770px;
-        top: 42%;
+        top: -44px;
         left: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 69%, 0 69%);
       }
 
       img {
-        max-width: 120%;
+        position: static;
+        max-width: 450px;
         margin-left: 0;
+        transform: translateX(-5%);
       }
+    }
+
+    .text_big {
+      width: 100%;
     }
 
     .card-list {
@@ -133,6 +144,11 @@
 
     .note {
       text-align: center;
+      width: 100%;
+      z-index: 1;
+      &__text{
+        margin: 0 auto;
+      }
     }
   }
 }

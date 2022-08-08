@@ -1597,7 +1597,7 @@ sup {
   align-items: center;
   z-index: 1;
   width: 13px;
-  height: 13px;
+  height: 14px;
   color: #ffffff;
   font-size: 10px;
   line-height: 1;
@@ -4146,25 +4146,36 @@ sup {
   }
 
   .section-info__content {
+    position: relative;
     padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .section-info__img-wrap {
-    width: 55%;
-    margin-bottom: 213px;
-    overflow: hidden;
+    position: relative;
+    width: 50%;
+    overflow: visible;
+    margin-top: auto;
   }
 
   .section-info__img-wrap:after {
     width: 770px;
     height: 770px;
-    top: 42%;
+    top: -44px;
     left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 69%, 0 69%);
   }
 
   .section-info__img-wrap img {
-    max-width: 120%;
+    position: static;
+    max-width: 450px;
     margin-left: 0;
+    transform: translateX(-5%);
+  }
+
+  .section-info .text_big {
+    width: 100%;
   }
 
   .section-info .card-list {
@@ -4178,6 +4189,12 @@ sup {
 
   .section-info .note {
     text-align: center;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .section-info .note__text {
+    margin: 0 auto;
   }
 
   .specialist-intro__slider-wrap {
