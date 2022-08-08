@@ -18,6 +18,9 @@
     opacity: 1;
     pointer-events: all;
   }
+  @include respond-to($xs){
+      width: 170px;
+  }
 }
 
 .trigger-popover {

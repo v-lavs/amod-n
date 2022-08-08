@@ -121,3 +121,26 @@
   }
 }
 
+@media screen and (max-width: 560px) {
+  .accordion {
+    .panel-collapse {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .accordion {
+    .panel-collapse__body {
+      display: block;
+    }
+
+    .panel-collapse__content {
+      padding-left: 0;
+      padding-top: 15px;
+    }
+  }
+
+}
+

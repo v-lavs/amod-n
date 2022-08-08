@@ -4258,6 +4258,10 @@ sup {
     margin-bottom: 0;
   }
 
+  .popover {
+    width: 170px;
+  }
+
   .container {
     max-width: 580px;
     padding: 0 24px;
@@ -4439,6 +4443,11 @@ sup {
 }
 
 @media screen and (max-width: 560px) {
+  .accordion .panel-collapse {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .section-memo {
     padding-bottom: 60px;
   }
@@ -4496,6 +4505,15 @@ sup {
 
   .literature-sources {
     padding-top: 30px;
+  }
+
+  .accordion .panel-collapse__body {
+    display: block;
+  }
+
+  .accordion .panel-collapse__content {
+    padding-left: 0;
+    padding-top: 15px;
   }
 
   .popup {
