@@ -213,11 +213,7 @@ $(document).ready(function () {
     $('.specialist-intro__slider-btn').click(function (e) {
         e.preventDefault();
         const parent = $(this).parents('.flip-card');
-
-
         $(parent).toggleClass('flip-card_active');
-        introSpecSlider.allowTouchMove = !$(parent).hasClass('flip-card_active');
-
     });
 
     $('.flip-card__slider').each(function (i, el) {
