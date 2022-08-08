@@ -4519,7 +4519,7 @@ sup {
   .rules-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .rules-list__item {
@@ -4662,6 +4662,10 @@ sup {
     padding-right: 20px;
     padding-bottom: 60px;
     box-shadow: none;
+  }
+
+  .rules-list {
+    justify-content: space-between;
   }
 
   .rules-list__item {

@@ -170,7 +170,7 @@
   .rules-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     &__item {
       width: 30%;
@@ -208,6 +208,7 @@
 
 @include respond-to($xxs) {
   .rules-list {
+    justify-content: space-between;
     &__item{
       width: 26%;
     }
