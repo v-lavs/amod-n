@@ -234,28 +234,37 @@ $(document).ready(function () {
     })
 
     // Popover
-
-    $('.trigger-popover').click(function (e) {
+    $('.popover__close').click(function (e) {
         e.preventDefault();
-        $('.trigger-popover').not(this).toggleClass('hide');
-        $(this).toggleClass('active');
+        $(this).parents('.popover').removeClass('active');
+    })
 
-        const popover = $(this).siblings('.popover');
-        popover.toggleClass('active');
+    $('.trigger-popover, .steps-list__thumb').click(function (e) {
+        e.preventDefault();
 
-        if ($(this).hasClass('active')) {
-            const btnData = $(this).get(0).getBoundingClientRect();
+        const $parent = $(this).closest('.steps-list__item');
+        const target = !$(this).hasClass('trigger-popover') ?$parent.find('.trigger-popover').get(0) : this;
+        const popover = $parent.find('.popover');
+
+        $('.popover').removeClass('active right left');
+        popover.addClass('active');
+
+        if (popover.hasClass('active')) {
+            const btnData = $(target).get(0).getBoundingClientRect();
             const margin = 5;
             const popoverWidth = popover.outerWidth();
             const windowW = $(window).width();
 
             const isRight = windowW - btnData.x - btnData.width - margin;
             const isLeft = btnData.x - margin;
+            const top = btnData.height + 10;
 
             if (isRight > popoverWidth) {
-                popover.css({left: btnData.width + margin, top: 23});
+                popover.css({left: btnData.width + margin, top: top});
+                popover.addClass('left')
             } else if (isLeft > popoverWidth) {
-                popover.css({left: -(popoverWidth + margin), top: 23});
+                popover.css({left: -(popoverWidth + margin), top: top});
+                popover.addClass('right')
             } else {
                 popover.css({top: btnData.height + margin, left: -(btnData.x - popoverWidth - btnData.width - margin)});
             }
