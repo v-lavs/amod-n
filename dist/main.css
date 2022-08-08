@@ -1631,8 +1631,7 @@ sup {
   height: 20px;
   border: 1px solid #F2FAFA;
   border-radius: 50%;
-  background: #fff url("../assets/img/close.svg") center no-repeat;
-  -webkit-background-size: 75%;
+  background: #ffffff url("../assets/img/close.svg") center no-repeat;
   background-size: 75%;
 }
 
@@ -1653,25 +1652,6 @@ sup {
 
 .trigger-popover.active {
   position: relative;
-  font-size: 0;
-}
-
-.trigger-popover.active:before {
-  position: absolute;
-  content: '\2573';
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  width: 13px;
-  height: 14px;
-  color: #ffffff;
-  font-size: 10px;
-  line-height: 1;
-  font-weight: 700;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .container {
