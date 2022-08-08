@@ -1,3 +1,121 @@
+
+.specialists {
+  .section-about {
+    color: #334040;
+
+    .wrap-slider {
+      padding-top: 20px;
+      position: relative;
+
+      &.shadow {
+        position: relative;
+      }
+    }
+
+    .section__title {
+      max-width: 886px;
+      width: 100%;
+      color: #22A1A6;
+      text-align: center;
+      margin: 0 auto 40px;
+    }
+
+    &__content {
+      max-width: 325px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      height: 100%;
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      ul li:before {
+        background-image: url(../assets/img/ic_arrow-green.svg);
+      }
+    }
+
+    .wrap-img {
+      position: absolute;
+      display: flex;
+      align-items: flex-end;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+      width: 33%;
+      z-index: 2;
+
+      img {
+        display: inline-block;
+      }
+    }
+  }
+
+  .section-treatment {
+    border: none;
+    border-radius: 80px 80px 0 0;
+
+    .d-flex {
+      padding-bottom: 60px;
+    }
+  }
+
+  .steps-list {
+    width: 100%;
+    //max-width: 690px;
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding: 65px 376px 65px 85px;
+    margin: 0 auto;
+
+    &__wrap {
+      position: relative;
+      width: 75%;
+    }
+
+    &__item {
+      position: relative;
+      width: auto;
+
+      &:hover,
+      &:focus {
+        .steps-list__thumb {
+          transform: scale(1.1);
+          box-shadow: 0 0 0 2px #22a1a6,
+          0 0 20px -6px rgba(65, 174, 217, .66);
+
+        }
+      }
+    }
+
+    &__thumb {
+      width: 80px;
+      height: 80px;
+      background-size: cover;
+      box-shadow: 0 0 2px #41AED9,
+      0 0 20px -6px rgba(65, 174, 217, .66);
+      transition: .35s;
+      margin: 15px 0;
+    }
+
+    .wrap-btn {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    &__wrap-img {
+      position: absolute;
+      max-width: 405px;
+      right: -80px;
+      top: -24px;
+    }
+  }
+}
+
 //--------------------
 
 .section-clinic {
@@ -283,107 +401,6 @@
 
 //-------------------
 
-.specialists {
-  .section-about {
-    color: #334040;
-
-    .wrap-slider {
-      padding-top: 20px;
-
-      &.shadow {
-        position: relative;
-      }
-    }
-
-    .section__title {
-      max-width: 886px;
-      width: 100%;
-      color: #22A1A6;
-      text-align: center;
-      margin: 0 auto 40px;
-    }
-
-    &__content {
-      max-width: 325px;
-      padding-top: 60px;
-      padding-bottom: 30px;
-      height: 100%;
-
-      p {
-        margin-bottom: 20px;
-      }
-
-      ul li:before {
-        background-image: url(../assets/img/ic_arrow-green.svg);
-      }
-    }
-  }
-
-  .section-treatment {
-    border: none;
-    border-radius: 80px 80px 0 0;
-
-    .d-flex {
-      padding-bottom: 60px;
-    }
-  }
-
-  .steps-list {
-    width: 100%;
-    //max-width: 690px;
-    flex-wrap: wrap;
-    background: #FFFFFF;
-    border-radius: 6px;
-    padding: 65px 376px 65px 85px;
-    margin: 0 auto;
-
-    &__wrap {
-      position: relative;
-      width: 75%;
-    }
-
-    &__item {
-      position: relative;
-      width: auto;
-
-      &:hover,
-      &:focus {
-        .steps-list__thumb {
-          transform: scale(1.1);
-          box-shadow: 0 0 0 2px #22a1a6,
-          0 0 20px -6px rgba(65, 174, 217, .66);
-
-        }
-      }
-    }
-
-    &__thumb {
-      width: 80px;
-      height: 80px;
-      background-size: cover;
-      box-shadow: 0 0 2px #41AED9,
-      0 0 20px -6px rgba(65, 174, 217, .66);
-      transition: .35s;
-      margin: 15px 0;
-    }
-
-    .wrap-btn {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-
-    &__wrap-img {
-      position: absolute;
-      max-width: 405px;
-      right: -80px;
-      top: -24px;
-    }
-  }
-}
-
 .app-method {
   width: 35%;
   padding-right: 20px;
@@ -425,6 +442,60 @@
 //----------------------
 
 @include respond-to($md) {
+  .specialists {
+    .section-about {
+
+      &__content {
+        max-width: 100%;
+        padding: 20px 40px;
+
+        ul li {
+          margin-bottom: 10px;
+        }
+      }
+
+      .wrap-slider {
+        display: flex;
+        background-color: #ffffff;
+        padding-bottom: 60px;
+      }
+
+      .wrap-img {
+        all: unset;
+        width: 50%;
+        display: flex;
+        align-items: flex-end;
+        padding-right: 20px;
+      }
+
+      .block-img {
+        display: none;
+      }
+
+      .swiper-pagination-bullet {
+        bottom: 30px;
+      }
+    }
+
+    .steps-list__wrap-img {
+      display: none;
+    }
+
+    .section-treatment {
+      border-radius: 40px 40px 0 0;
+    }
+
+    .steps-list {
+      padding: 60px 88px;
+
+      &__wrap {
+        width: 55%;
+      }
+    }
+  }
+  .about-slider {
+    width: 50%;
+  }
   .section-intro {
     padding-bottom: 0;
     background-image: none !important;
@@ -478,26 +549,30 @@
   .app-method {
     width: 45%;
   }
-  .specialists {
-    .steps-list__wrap-img {
-      display: none;
-    }
-
-    .section-treatment {
-      border-radius: 40px 40px 0 0;
-    }
-
-    .steps-list {
-      padding: 60px 88px;
-
-      &__wrap {
-        width: 55%;
-      }
-    }
-  }
 }
 
 @include respond-to($sm) {
+  .specialists {
+    .section-treatment {
+      .d-flex {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+
+    .steps-list {
+      padding-left: 150px;
+      padding-right: 150px;
+
+      &__item {
+        margin-bottom: 0;
+      }
+
+      &__wrap {
+        width: 100%;
+      }
+    }
+  }
   .section-properties {
     &__inner {
       flex-direction: column;
@@ -544,27 +619,6 @@
       padding-right: 5px;
     }
   }
-  .specialists {
-    .section-treatment {
-      .d-flex {
-        flex-wrap: wrap;
-        flex-direction: column;
-      }
-    }
-
-    .steps-list {
-      padding-left: 150px;
-      padding-right: 150px;
-
-      &__item {
-        margin-bottom: 0;
-      }
-
-      &__wrap {
-        width: 100%;
-      }
-    }
-  }
   .app-method {
     width: 100%;
     display: flex;
@@ -595,12 +649,22 @@
 }
 
 @include respond-to($xs) {
-  .block-action {
-    &__grid {
-      display: block;
-    }
-  }
   .specialists {
+
+    .section-about {
+      .wrap-img{
+        width: 100%;
+        justify-content: center;
+      }
+      .wrap-slider {
+        display: block;
+      }
+
+    }
+    .about-slider{
+      width: 100%;
+      padding-bottom: 0;
+    }
     .steps-list {
       justify-content: center;
       padding-left: 0;
@@ -613,13 +677,19 @@
 
     .section-treatment {
       border-radius: 40px 40px 0 0;
-      .d-flex{
+
+      .d-flex {
         padding-bottom: 40px;
       }
     }
   }
+  .block-action {
+    &__grid {
+      display: block;
+    }
+  }
   .section-properties__part:first-child:before,
-  .section-properties__part:first-child:after{
+  .section-properties__part:first-child:after {
     display: none;
   }
 }
@@ -632,6 +702,7 @@
     .description-dec {
       width: 100%;
     }
+
     &__text {
       padding: 0;
       margin-bottom: 10px;
@@ -648,6 +719,21 @@
 }
 
 @include respond-to($xxs) {
+  .specialists {
+    .steps-list {
+      justify-content: space-between;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      &__item {
+        margin: 0;
+      }
+    }
+
+    .section-treatment {
+      border-radius: 20px 20px 0 0;
+    }
+  }
   .section-properties {
     &__part:first-child {
       &:after,
@@ -681,20 +767,4 @@
       margin-bottom: 0;
     }
   }
-  .specialists {
-    .steps-list {
-      justify-content: space-between;
-      padding-left: 30px;
-      padding-right: 30px;
-
-      &__item {
-        margin: 0;
-      }
-    }
-
-    .section-treatment {
-      border-radius: 20px 20px 0 0;
-    }
-  }
-
 }

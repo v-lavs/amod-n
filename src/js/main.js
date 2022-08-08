@@ -114,6 +114,22 @@ $(document).ready(function () {
     const introSpecSliderSelector = $('.specialist-intro__slider-wrap').get(0);
 
     function handleResponsive() {
+
+        if ($(window).outerWidth() <= 1160) {
+            if (!aboutSlider && aboutSelector) {
+                aboutSlider = new Swiper(".about-slider", {
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    pagination: {
+                        el: ".wrap-slider .swiper-pagination",
+                    },
+                });
+            }
+        } else {
+            destroySwiper(aboutSlider);
+            aboutSlider = null;
+        }
+
         if ($(window).outerWidth() <= 1024) {
             if (!howWorkSlider && howWorkSelector) {
                 howWorkSlider = new Swiper(".how-work", {
@@ -134,6 +150,7 @@ $(document).ready(function () {
             destroySwiper(howWorkSlider);
             howWorkSlider = null;
         }
+
         if ($(window).outerWidth() <= 992) {
             if (!introSpecSlider && introSpecSliderSelector) {
                 introSpecSlider = new Swiper(".specialist-intro__slider-wrap", {
@@ -171,15 +188,7 @@ $(document).ready(function () {
                 });
             }
 
-            if (!aboutSlider && aboutSelector) {
-                aboutSlider = new Swiper(".about-slider", {
-                    spaceBetween: 20,
-                    slidesPerView: 1,
-                    pagination: {
-                        el: ".about-slider .swiper-pagination",
-                    },
-                });
-            }
+
         } else {
             destroySwiper(stepSlider);
             stepSlider = null;
@@ -187,8 +196,6 @@ $(document).ready(function () {
             destroySwiper(opportunitiesSlider);
             opportunitiesSlider = null;
 
-            destroySwiper(aboutSlider);
-            aboutSlider = null;
         }
     }
 
