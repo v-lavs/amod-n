@@ -293,6 +293,7 @@ $(document).ready(function () {
         const modalID = $(this).data('modal');
         const modal = $('#' + modalID);
         modal.addClass('show');
+
         jQuery('.backdrop').fadeIn();
         $("body").addClass("modal-open");
     });
@@ -301,7 +302,20 @@ $(document).ready(function () {
         e.preventDefault();
         $('.rules-list__text').removeClass('show');
         jQuery('.backdrop').fadeOut();
-        $("body").removeClass("modal-open");
+    });
+
+    $('.btn-chart').on('click', function (e) {
+        e.preventDefault();
+        const modalID = $(this).data('modal');
+        const modal = $('#' + modalID);
+
+        modal.fadeIn();
+        jQuery('.overlay').fadeIn();
+    });
+    $('.popover__close, .overlay').on('click', function (e) {
+        e.preventDefault();
+        $('.flip-card__popover').fadeOut();
+        jQuery('.overlay').fadeOut();
     });
 });
 

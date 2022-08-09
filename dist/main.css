@@ -1000,6 +1000,7 @@ sup {
   margin: 0 20px;
 }
 
+.overlay,
 .backdrop {
   display: none;
   position: fixed;
@@ -1007,9 +1008,16 @@ sup {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #000;
   opacity: .5;
   z-index: 800;
+}
+
+.backdrop {
+  background-color: #000;
+}
+
+.overlay {
+  background-color: #22A1A6;
 }
 
 .literature-sources {
@@ -1640,7 +1648,7 @@ sup {
   border: 1px solid #F2FAFA;
   border-radius: 50%;
   background: #ffffff url("../assets/img/close.svg") center no-repeat;
-  background-size: 75%;
+  background-size: 82%;
   z-index: 1;
 }
 
@@ -2949,6 +2957,7 @@ sup {
 }
 
 .flip-card__popover {
+  display: none;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -2959,11 +2968,10 @@ sup {
   font-size: 14px;
   line-height: 1.29;
   color: #334040;
-  padding: 10px;
+  padding: 10px 10px 15px;
   z-index: 810;
   width: 90%;
-  max-height: min-content;
-  height: 270px;
+  max-height: 370px;
 }
 
 .btn-chart {
@@ -3008,7 +3016,7 @@ sup {
 }
 
 .popover__content {
-  height: 100%;
+  max-height: 280px;
   padding: 13px;
 }
 

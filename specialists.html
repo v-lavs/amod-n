@@ -275,7 +275,7 @@
                                                 <circle cx="127" cy="155" r="10" fill="white"></circle>
                                                 <path d="M229 69L268 48H442" stroke="#334040"></path>
                                                 <circle cx="229" cy="69" r="4" fill="#334040"></circle>
-                                                <g class="btn-chart btn-chart-green" id="chart-popover1">
+                                                <g class="btn-chart btn-chart-green" data-modal="chart-popover1">
                                                     <rect class="bg-white" x="271.5" y="0.5" width="172" height="37"
                                                           rx="5.5" fill="white"></rect>
                                                     <g clip-path="url(#clip0_827_3287)">
@@ -291,7 +291,7 @@
                                                 </g>
                                                 <path d="M232 185H444" stroke="#334040"></path>
                                                 <circle cx="232" cy="185" r="4" fill="#334040"></circle>
-                                                <g class="btn-chart btn-chart-light" id="chart-popover2">
+                                                <g class="btn-chart btn-chart-light" data-modal="chart-popover2">
                                                     <rect class="bg-white" x="288.5" y="137.5" width="155" height="37"
                                                           rx="5.5" fill="white"></rect>
                                                     <g clip-path="url(#clip1_827_3287)">
@@ -307,7 +307,7 @@
                                                 </g>
                                                 <path d="M229 280L268 301H442" stroke="#334040"></path>
                                                 <circle cx="230" cy="280" r="4" fill="#334040"></circle>
-                                                <g class="btn-chart btn-chart-dark" id="chart-popover3">
+                                                <g class="btn-chart btn-chart-dark" data-modal="chart-popover3">
                                                     <rect class="bg-white" x="306.5" y="253.5" width="137" height="37"
                                                           rx="5.5" fill="white"></rect>
                                                     <g clip-path="url(#clip2_827_3287)">
@@ -339,23 +339,28 @@
                                         </div>
                                     </div>
 
-                                    <div class="flip-card__popover">
-                                        <div class="flip-card__popover-wrap">
-                                            <button class="popover__close"></button>
-                                            <div data-simplebar data-simplebar-auto-hide="false"
-                                                 class="popover__content">
-                                                <p>Дерматофіти Trichophyton rubrum, Trichophyton mentagrophytes та
-                                                    Epidermophyton floccosum</p>
-                                                <p>Дерматофіти Trichophyton rubrum, Trichophyton mentagrophytes та
-                                                    Epidermophyton floccosum</p>
-                                                <p>Дерматофіти Trichophyton rubrum, Trichophyton mentagrophytes та
-                                                    Epidermophyton floccosum</p>
-                                                <p>Дерматофіти Trichophyton rubrum, Trichophyton mentagrophytes та
-                                                    Epidermophyton floccosum</p>
-                                            </div>
+                                    <div id="chart-popover1" class="flip-card__popover">
+                                        <button class="popover__close"></button>
+                                        <div data-simplebar data-simplebar-auto-hide="false" class="popover__content">
+                                            <p>Дерматофіти Trichophyton rubrum, Trichophyton mentagrophytes та
+                                                Epidermophyton floccosum</p>
                                         </div>
                                     </div>
-                                    <div class="backdrop" style="display:block;"></div>
+                                    <div id="chart-popover2" class="flip-card__popover">
+                                        <button class="popover__close"></button>
+                                        <div data-simplebar data-simplebar-auto-hide="false" class="popover__content">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                                                dignissimos eveniet facere nulla quia quis tenetur unde voluptate. Illo,
+                                                illum?</p>
+                                        </div>
+                                    </div>
+                                    <div id="chart-popover3" class="flip-card__popover">
+                                        <button class="popover__close"></button>
+                                        <div data-simplebar data-simplebar-auto-hide="false" class="popover__content">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="overlay"></div>
                                     <button class="specialist-intro__slider-btn blue"></button>
                                 </div>
                             </div>

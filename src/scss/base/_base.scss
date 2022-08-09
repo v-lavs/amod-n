@@ -195,7 +195,7 @@ sup {
     margin: 0 20px;
   }
 }
-
+.overlay,
 .backdrop {
   display: none;
   position: fixed;
@@ -203,9 +203,14 @@ sup {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #000;
   opacity: .5;
   z-index: 800;
+}
+.backdrop {
+  background-color: #000;
+}
+.overlay{
+  background-color: #22A1A6;
 }
 
 .literature-sources{
