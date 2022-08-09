@@ -45,7 +45,7 @@
 
     &__thumb {
       position: relative;
-      min-height: 215px;
+      height: 220px;
       display: flex;
       justify-content: center;
       align-items: flex-end;
@@ -68,6 +68,11 @@
       img {
         position: relative;
       }
+    }
+
+    &__wrap-img{
+      max-width: 246px;
+      margin: 0 auto;
     }
 
     &__title {

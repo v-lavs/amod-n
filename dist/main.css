@@ -2055,7 +2055,7 @@ sup {
 
 .section-posts .card-post__thumb {
   position: relative;
-  min-height: 215px;
+  height: 220px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -2078,6 +2078,11 @@ sup {
 
 .section-posts .card-post__thumb img {
   position: relative;
+}
+
+.section-posts .card-post__wrap-img {
+  max-width: 246px;
+  margin: 0 auto;
 }
 
 .section-posts .card-post__title {
@@ -4190,8 +4195,12 @@ sup {
     max-width: 760px;
   }
 
+  .footer .text_small {
+    font-size: 10px;
+  }
+
   .footer .info-block {
-    font-size: 11px;
+    font-size: 14px;
     max-width: 220px;
   }
 
@@ -4760,6 +4769,7 @@ sup {
   .rules-list__text {
     display: none;
     border-radius: 10px;
+    overflow: hidden;
   }
 
   .rules-list__text.show {

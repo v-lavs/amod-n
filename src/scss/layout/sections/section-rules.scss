@@ -180,7 +180,7 @@
     &__text {
       display: none;
       border-radius: 10px;
-
+      overflow: hidden;
       &.show {
         display: block;
         position: fixed;
