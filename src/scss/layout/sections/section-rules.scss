@@ -179,6 +179,7 @@
 
     &__text {
       display: none;
+      border-radius: 10px;
 
       &.show {
         display: block;
@@ -190,8 +191,9 @@
         z-index: 1000;
         padding: 40px;
         width: 80%;
+
         .btn_close {
-          display: block!important;
+          display: block !important;
         }
       }
     }
@@ -209,9 +211,11 @@
 @include respond-to($xxs) {
   .rules-list {
     justify-content: space-between;
-    &__item{
+
+    &__item {
       width: 26%;
     }
+
     &__icon {
       flex-shrink: 1;
     }

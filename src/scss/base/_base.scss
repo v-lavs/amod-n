@@ -338,6 +338,14 @@ sup {
   }
 }
 
+
+.simplebar-scrollbar::before {
+  background-color: #22A1A6;
+}
+.simplebar-track.simplebar-vertical {
+  width: 7px!important;
+}
+
 @include respond-to($xl){
   .btn-puy{
     right: 70px;
@@ -362,7 +370,7 @@ sup {
   }
 }
 
-@include respond-to($xxs){
+@include respond-to($xs){
   .btn-puy{
     width: 74px;
     right: 0;

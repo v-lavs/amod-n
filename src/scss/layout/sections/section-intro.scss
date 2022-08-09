@@ -108,7 +108,7 @@
 
   border: 1px solid #22A1A6;
   border-radius: 10px;
-  padding: 20px;
+  padding: 60px 10px 68px 20px;
   overflow: hidden;
 
   -webkit-backface-visibility: hidden;
@@ -139,8 +139,8 @@
   transform: rotateY(180deg);
   color: #3B4040;
 
-  .swiper {
-    height: 100%;
+  .flip-card__content {
+    justify-content: flex-start;
   }
 
   .flip-card__desc {
@@ -161,6 +161,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-height: 100%;
+  padding-right: 10px;
+
+  .wrap-img {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+
+    svg {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+
+    }
+  }
 }
 
 .flip-card__title {
@@ -174,7 +189,7 @@
 
 .flip-card__desc {
   position: relative;
-  padding: 10px 0;
+  padding: 10px 0 20px;
 
   &:before {
     content: '';
@@ -188,116 +203,74 @@
     transform: translateX(-50%);
     opacity: 0.2;
   }
+  .overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #F2F8FA;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    .active{
+      pointer-events: all;
+      z-index: 3;
+    }
+  }
 }
 
 .btn-chart {
-  position: relative;
-  display: inline-flex;
-  padding: 5px 15px 5px 20px;
-  min-width: auto;
-  font-size: 16px;
-  text-transform: none;
-  font-weight: 400;
-  border-radius: 6px;
-  color: #000000;
-  &:before{
-    position: absolute;
-    content: '';
-    display: block;
-    width: 185px;
-    height: 41px;
-    background-repeat: no-repeat;
-    background-position: center 0;
-    background-size: contain;
-    z-index: 1;
-  }
+  cursor: pointer;
+  transition: .35s;
 
-  &:hover,
-  &:focus {
-    span {
-      transform: rotate(-90deg);
-
-      svg path {
+  &-dark,
+  &-green {
+    &:hover,
+    &:focus {
+      .icon {
         fill: #ffffff;
       }
+
+      .text {
+        fill: #ffffff;
+      }
+
+      .border {
+        stroke: transparent;
+      }
     }
   }
 
-  span {
-    display: block;
-    margin-left: 10px;
-    width: 20px;
-    height: 20px;
-    transition: .35s;
+  &-green {
+    &:hover,
+    &:focus {
+      .bg-white {
+        fill: #2cc8cc;
+      }
+    }
+  }
 
-    .icon-btn {
-      width: 100%;
-      height: auto;
-      display: inline-block;
+  &-dark {
+    &:hover,
+    &:focus {
+      .bg-white {
+        fill: #22A1A6;
+      }
+    }
+  }
 
-      path {
-        fill: red;
+  &-light {
+    &:hover,
+    &:focus {
+      .bg-white {
+        fill: #E1EBEE;
       }
     }
   }
 }
-
-.flip-card__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  align-items: center;
-  padding-top: 35px;
-
-  .grid-item1 {
-    grid-area: 1 / 1 / 4 / 2;
-    padding: 45px 0;
-    text-align: left;
-
-    img {
-      max-width: 254px;
-    }
-  }
-
-  .grid-item2 {
-    grid-area: 1 / 2 / 2 / 3;
-
-    .btn-chart {
-      //transform: translateX(-45%);
-      &:before{
-        background-image: url(../assets/img/line-poligon2.svg);
-        transform: scaleY(-1);
-        bottom: -50px;
-        left: -48px;
-      }
-    }
-  }
-
-  .grid-item3 {
-    grid-area: 2 / 2 / 3 / 3;
-    text-align: right;
-    .btn-chart:before{
-      width: 230px;
-      background-image: url(../assets/img/line2.svg);
-      bottom: -50px;
-      left: -95px;
-    }
-  }
-
-  .grid-item4 {
-    grid-area: 3 / 2 / 4 / 3;
-    text-align: left;
-    .btn-chart {
-      &:before{
-        background-image: url(../assets/img/line-poligon2.svg);
-        bottom: -10px;
-        left: -54px;
-      }
-      //transform: translateX(-45%);
-    }
-  }
-}
-
 
 @include respond-to($lg) {
   .specialist-intro__slider {
@@ -357,10 +330,25 @@
   }
 }
 
+@media screen and (max-width: 560px) {
+  .flip-card-back {
+    padding-top: 20px;
+  }
+
+}
+
 @include respond-to($xxs) {
   .specialist-intro__slider {
     & > .swiper-slide:nth-child(1n) {
-      height: 310px;
+      height: 342px;
+    }
+  }
+  .flip-card-front {
+    padding-top: 20px;
+  }
+  .flip-card__content {
+    .wrap-img{
+      max-width: 260px;
     }
   }
 }

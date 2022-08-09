@@ -216,22 +216,7 @@ $(document).ready(function () {
         $(parent).toggleClass('flip-card_active');
     });
 
-    $('.flip-card__slider').each(function (i, el) {
-        const slidesCount = $(el).find('.flip-card__content').length;
-        if (slidesCount > 1) {
-            new Swiper(el, {
-                nested: true,
-                spaceBetween: 20,
-                slidesPerView: 1,
-                slideClass: 'flip-card__content',
-                pagination: {
-                    el: '.flip-card__slider .swiper-pagination',
-                    clickable: true,
-                    type: "fraction",
-                },
-            });
-        }
-    })
+
 
     // Popover
     $('.popover__close').click(function (e) {
