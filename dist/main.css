@@ -1641,6 +1641,7 @@ sup {
   border-radius: 50%;
   background: #ffffff url("../assets/img/close.svg") center no-repeat;
   background-size: 75%;
+  z-index: 1;
 }
 
 .trigger-popover {
@@ -2750,6 +2751,10 @@ sup {
   padding-bottom: 110px;
 }
 
+.section-intro .backdrop {
+  background-color: #22A1A6;
+}
+
 .specialist-intro__slider-wrap {
   overflow: visible;
 }
@@ -2907,6 +2912,7 @@ sup {
   max-width: 380px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 40px;
 }
 
 .flip-card__content .wrap-img svg {
@@ -2942,23 +2948,22 @@ sup {
   opacity: 0.2;
 }
 
-.flip-card__desc .overlay {
+.flip-card__popover {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 376px;
   background-color: #F2F8FA;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-}
-
-.flip-card__desc .overlay .active {
-  pointer-events: all;
-  z-index: 3;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #334040;
+  padding: 10px;
+  z-index: 810;
+  width: 90%;
+  max-height: min-content;
+  height: 270px;
 }
 
 .btn-chart {
@@ -3000,6 +3005,11 @@ sup {
 .btn-chart-light:hover .bg-white,
 .btn-chart-light:focus .bg-white {
   fill: #E1EBEE;
+}
+
+.popover__content {
+  height: 100%;
+  padding: 13px;
 }
 
 .section-advantages {
@@ -4359,6 +4369,10 @@ sup {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .flip-card__content .wrap-img {
+    padding-top: 20px;
   }
 
   .section-advantages__circle {
