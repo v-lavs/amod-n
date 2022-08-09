@@ -217,9 +217,8 @@
     span {
       transform: rotate(-90deg);
 
-      .icon-btn path {
-        fill: #ffffff !important;
-        stroke: #ffffff !important;
+      svg path {
+        fill: #ffffff;
       }
     }
   }

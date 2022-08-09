@@ -2944,10 +2944,9 @@ sup {
   transform: rotate(-90deg);
 }
 
-.btn-chart:hover span .icon-btn path,
-.btn-chart:focus span .icon-btn path {
-  fill: #ffffff !important;
-  stroke: #ffffff !important;
+.btn-chart:hover span svg path,
+.btn-chart:focus span svg path {
+  fill: #ffffff;
 }
 
 .btn-chart span {
