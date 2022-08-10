@@ -172,10 +172,10 @@
 
   .menu {
     flex-direction: column;
-    padding: 0 15px 60px;
+    padding: 0 15px;
 
     &__item {
-      font-size: 20px;
+      font-size: 26px;
       margin-bottom: 15px;
 
       &:hover > .sub-menu {
@@ -245,11 +245,14 @@
   .menu{
     padding: 0;
   }
-  .menu__item .sub-menu_column {
-    min-width: 312px;
-    width: 100%;
-    padding: 0;
-    box-shadow: none;
+  .menu__item {
+    font-size: 20px;
+    .sub-menu_column {
+      min-width: 312px;
+      width: 100%;
+      padding: 0;
+      box-shadow: none;
+    }
   }
   .menu__item .sub-menu__item > a {
     font-size: 16px;

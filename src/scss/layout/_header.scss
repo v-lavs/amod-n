@@ -211,6 +211,9 @@
       display: none;
     }
   }
+  .nav{
+    padding-bottom: 60px;
+  }
 }
 
 @include respond-to($xxs) {
@@ -227,5 +230,9 @@
       display: none;
     }
   }
-
+  .nav .social-bar {
+    padding: 20px 0;
+    margin-bottom: 10px;
+    border-bottom:none;
+  }
 }

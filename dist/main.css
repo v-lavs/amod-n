@@ -3696,11 +3696,11 @@ sup {
 
   .menu {
     flex-direction: column;
-    padding: 0 15px 60px;
+    padding: 0 15px;
   }
 
   .menu__item {
-    font-size: 20px;
+    font-size: 26px;
     margin-bottom: 15px;
   }
 
@@ -4511,6 +4511,10 @@ sup {
     padding: 0;
   }
 
+  .menu__item {
+    font-size: 20px;
+  }
+
   .menu__item .sub-menu_column {
     min-width: 312px;
     width: 100%;
@@ -4552,6 +4556,10 @@ sup {
 
   .header .lang-switch {
     display: none;
+  }
+
+  .nav {
+    padding-bottom: 60px;
   }
 
   .footer_top {
@@ -4878,6 +4886,12 @@ sup {
 
   .header__logo {
     display: none;
+  }
+
+  .nav .social-bar {
+    padding: 20px 0;
+    margin-bottom: 10px;
+    border-bottom: none;
   }
 
   .section-banner {
