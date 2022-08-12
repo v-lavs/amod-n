@@ -77,8 +77,6 @@ $(document).ready(function () {
     //ACCORDION
     function handleAccordion(selector) {
         const firstAcc = $(selector + ' ' + '.panel__heading').get(0);
-        $(firstAcc).addClass('open');
-        $(firstAcc).siblings('.panel-collapse').slideDown(500);
 
         $(selector + ' ' + '.panel__heading').on('click', function () {
             if ($(this).hasClass('open')) {

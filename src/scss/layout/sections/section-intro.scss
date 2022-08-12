@@ -350,7 +350,12 @@
   .flip-card-back {
     padding-top: 20px;
   }
-
+.btn_desc{
+  display: none!important;
+}
+  .btn_mob{
+    display: block!important;
+  }
 }
 
 @include respond-to($xxs) {
