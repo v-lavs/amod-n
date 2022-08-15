@@ -172,6 +172,7 @@
   .popup__content {
     font-size: 14px;
     line-height: 1.57;
+    padding-top: 20px;
   }
 
   .popup__logo {
@@ -208,6 +209,7 @@
   .popup_big {
     padding: 0 0 15px;
     height: 717px;
+
     .popup__contact-item {
       max-width: 100%;
     }

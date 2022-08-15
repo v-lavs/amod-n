@@ -21813,31 +21813,44 @@ $(document).ready(function () {
         $(this).toggleClass('sub-menu__toggle_active')
     });
 
-// SMOOTH SCROLL TO ANCHOR
-    function smoothScrollToAnchor(selector) {
-        $(selector).on('click', function (event) {
-            let anchor = $.attr(this, 'href');
-            let offsetSize = $("header").innerHeight();
+// // SMOOTH SCROLL TO ANCHOR
+    let smoothScroll = location.hash;
+    let offsetSize = $("header").innerHeight();
+    location.hash = '';
+    if (smoothScroll[1] != undefined) {
+        $('html, body').animate({scrollTop: $(smoothScroll).offset().top - offsetSize}, 1500);
+    }
+    ;
 
-            if (anchor.match(/^#/) && anchor !== '#') {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top - offsetSize
-                }, 2000);
-                nav.removeClass('open');
-                jQuery('.backdrop').fadeOut();
-                $('body').removeClass('modal_open');
+    $('a[href*="#"]')
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                let target = $(this.hash);
+                target = target.length ? target : $('[id=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 2000, function () {
+                        let $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) {
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1');
+                            $target.focus();
+                        }
+                        ;
+                    });
+                }
             }
         });
-    }
-
-    let myHash = location.hash;
-    location.hash = '';
-    let offsetSize = $("header").innerHeight();
-    if (myHash[1] != undefined) {
-        $('html, body').animate({scrollTop: $(myHash).offset().top - offsetSize}, 2000);
-    }
-    smoothScrollToAnchor('.menu__link');
 
     //    HEADER SCROLL
     const header = $(".header");
