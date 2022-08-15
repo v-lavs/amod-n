@@ -195,17 +195,19 @@
   }
 }
 
-@include respond-to($sm) {
+@include respond-to($xs) {
   .popup_big {
     .popup__contact-item {
-      max-width: 307px;
+      max-width: 420px;
       flex: 0 0 100%;
     }
   }
 }
 
-@include respond-to($xs) {
+@include respond-to($xxs) {
   .popup_big {
+    padding: 0 0 15px;
+    height: 717px;
     .popup__contact-item {
       max-width: 100%;
     }
