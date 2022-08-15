@@ -21836,7 +21836,7 @@ $(document).ready(function () {
                 if (target.length) {
                     event.preventDefault();
                     $('html, body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top - offsetSize
                     }, 2000, function () {
                         let $target = $(target);
                         $target.focus();
