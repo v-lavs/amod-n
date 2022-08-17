@@ -146,7 +146,8 @@
       text-align: center;
       width: 100%;
       z-index: 1;
-      &__text{
+
+      &__text {
         margin: 0 auto;
       }
     }
@@ -163,6 +164,9 @@
       width: 100%;
     }
 
+    .text_big {
+      font-size: 29px;
+    }
   }
 }
 
