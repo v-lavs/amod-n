@@ -272,7 +272,7 @@ $(document).ready(function () {
 
     if ($alertPopup.get(0)) {
         function openAlertPopup() {
-            $('body').addClass('modal-open');
+            $('body').addClass('modal_open');
             $alertPopup.fadeIn();
             $('.backdrop').fadeIn();
         }
@@ -280,7 +280,7 @@ $(document).ready(function () {
         function closeAlertPopup() {
             $alertPopup.fadeOut();
             $('.backdrop').fadeOut();
-            $('body').removeClass('modal-open');
+            $('body').removeClass('modal_open');
         }
 
 
@@ -306,7 +306,7 @@ $(document).ready(function () {
         modal.addClass('show');
 
         jQuery('.backdrop').fadeIn();
-        $("body").addClass("modal-open");
+        $("body").addClass("modal_open");
     });
 
     $('.btn_close, .backdrop').on('click', function (e) {
