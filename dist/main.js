@@ -22088,6 +22088,7 @@ $(document).ready(function () {
         e.preventDefault();
         $('.rules-list__text').removeClass('show');
         jQuery('.backdrop').fadeOut();
+        $('body').removeClass('modal_open');
     });
 
     $('.btn-chart').on('click', function (e) {
